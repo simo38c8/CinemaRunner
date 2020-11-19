@@ -3,6 +3,116 @@
 body {
   background-color: black;
 }
+#header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding-left: 4rem;
+  width: 100%;
+  height: 5rem;
+  background-color: var(--umber);
+}
+#header-container a {
+  cursor: pointer;
+  margin-top: 1.6rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+#header-container #log-in-button {
+  padding-left: 7rem;
+  font-size: 1.01rem;
+}
+
+#logo-container {
+  margin-top: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+}
+#mobile-menu-button {
+  display: none;
+}
+#mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  #header-container #log-in-button {
+    padding-left: 0rem;
+    font-size: 1.01rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #header-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    padding-left: 4rem;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--umber);
+  }
+
+  #header-container a {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #header-container a {
+    display: none;
+  }
+  #logo-container {
+    display: none;
+  }
+
+  #header-container {
+    position: relative;
+  }
+
+  #mobile-menu-button {
+    display: block;
+    position: absolute;
+    top: -0.7rem;
+    right: 1.3rem;
+    font-size: 4rem;
+  }
+  #mobile-menu {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--umber);
+  }
+  #mobile-menu-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    margin-bottom: 7rem;
+    font-size: 2.5rem;
+  }
+  #mobile-menu-container a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    margin-top: 3rem;
+    text-align: center;
+    overflow: auto;
+  }
+  #logo-container-mobile {
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+  #close-menu-button {
+    position: absolute;
+    right: 5vw;
+    font-size: 4rem;
+  }
+}
+
 /*************************************************** header *************************************************************/
 
 /*************************************************** splash *************************************************************/
