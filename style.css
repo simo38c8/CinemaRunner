@@ -187,6 +187,13 @@ body {
   opacity: 1;
 }
 
+#intro-container-button1 button:focus {
+  outline: none;
+}
+#intro-container-button2 button:focus {
+  outline: none;
+}
+
 @media only screen and (max-width: 700px) {
   #intro-container-button1 p {
     transition: 0.5s;
@@ -219,6 +226,54 @@ body {
 /*************************************************** welcome *************************************************************/
 
 /*************************************************** events *************************************************************/
+#events-container {
+  background-image: url(akira.png);
+  height: 30rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-top: 3rem;
+}
+#events-container h1 {
+  font-size: 6rem;
+  margin-left: 4rem;
+}
+#events-container p {
+  font-size: 3rem;
+  width: 70rem;
+  margin-left: 4rem;
+}
+
+#events-cover-beholder {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+  height: 30rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+@media only screen and (max-width: 1200px) {
+  #events-container p {
+    font-size: 2rem;
+    width: 90%;
+    margin-left: 2rem;
+  }
+  #events-container h1 {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #events-container p {
+    font-size: 1.5rem;
+    width: 90%;
+    margin-left: 2rem;
+  }
+  #events-container h1 {
+    font-size: 4rem;
+    margin-left: 1rem;
+  }
+}
 
 /*************************************************** events *************************************************************/
 
