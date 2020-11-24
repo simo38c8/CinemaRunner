@@ -24,7 +24,8 @@ body {
   -webkit-font-feature-settings: "pnum";
   font-feature-settings: "pnum";
   font-variant-numeric: proportional-nums;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-style: normal;
