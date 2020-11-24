@@ -129,7 +129,93 @@ body {
 /*************************************************** splash *************************************************************/
 
 /*************************************************** welcome *************************************************************/
+#intro-container1 h1 {
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
+#intro-container1 p {
+  margin: auto;
+  width: 37rem;
+}
+#intro-container2 {
+  display: grid;
+  grid-template-columns: 15rem 15rem;
+  margin: auto;
+  padding-top: 2rem;
+  width: 40rem;
+  gap: 10rem;
+  margin-top: 2rem;
+}
 
+#intro-container-button1 button {
+  height: 4rem;
+  width: 15rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+  border-radius: 3rem;
+  background-color: var(--crimson);
+  border: 0;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+#intro-container-button2 button {
+  height: 4rem;
+  width: 15rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+  border-radius: 3rem;
+  background-color: var(--gunpowder);
+  border: 0;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+#intro-container-button1 p {
+  transition: 0.5s;
+  opacity: 0;
+}
+#intro-container-button1 button:hover + p {
+  opacity: 1;
+}
+#intro-container-button2 p {
+  transition: 0.5s;
+  opacity: 0;
+}
+#intro-container-button2 button:hover + p {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  #intro-container-button1 p {
+    transition: 0.5s;
+    opacity: 1;
+    padding-bottom: 1rem;
+  }
+  #intro-container-button2 p {
+    transition: 0.5s;
+    opacity: 1;
+    padding-bottom: 1rem;
+  }
+  #intro-container1 h1 {
+    font-size: 2.5rem;
+  }
+  #intro-container1 p {
+    margin: auto;
+    width: 70vw;
+    font-size: 1.3rem;
+  }
+  #intro-container2 {
+    display: block;
+    margin: auto;
+    padding-top: 2rem;
+    width: 20rem;
+    gap: 10rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
 /*************************************************** welcome *************************************************************/
 
 /*************************************************** events *************************************************************/
