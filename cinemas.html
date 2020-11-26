@@ -3,11 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CinemaRunner :: Front-page</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <div id="sorting-container">
+        <div id="sorting-by-city">
+          <form action="">
+            <label for="cars">City:</label>
+            <select name="cities" id="cities-selector">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+            <br /><br />
+            <!-- <input type="submit" value="Submit" /> -->
+          </form>
+        </div>
+        <div id="sorting-by-score"></div>
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>
