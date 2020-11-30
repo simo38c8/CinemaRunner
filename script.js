@@ -11,3 +11,19 @@ function openMobileMenu() {
 function closeMobileMenu() {
   document.querySelector("#mobile-menu").style.display = "none";
 }
+
+function scrollHeader() {
+  let scrollpos = window.scrollY;
+
+  window.addEventListener("scroll", function () {
+    scrollpos = window.scrollY;
+
+    console.log(scrollpos);
+    if (scrollpos >= 700) {
+      document.querySelector("#header-container").style.backgroundColor = "#8a2c2a";
+    } else {
+      document.querySelector("#header-container").style.backgroundColor = "transparent";
+    }
+  });
+}
+scrollHeader();
