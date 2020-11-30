@@ -19,7 +19,7 @@ function scrollHeader() {
     scrollpos = window.scrollY;
 
     console.log(scrollpos);
-    if (scrollpos >= 700) {
+    if (scrollpos >= 650) {
       document.querySelector("#header-container").style.backgroundColor = "#8a2c2a";
     } else {
       document.querySelector("#header-container").style.backgroundColor = "transparent";
