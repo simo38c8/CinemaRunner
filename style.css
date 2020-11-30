@@ -1,3 +1,4 @@
+/***************************************************************************** index.html start ************************************************************************************************/
 /*************************************************** header *************************************************************/
 
 body {
@@ -479,3 +480,188 @@ body {
 }
 
 /*************************************************** footer *************************************************************/
+
+/***************************************************************************** index.html done ************************************************************************************************/
+
+/*************************************************** cinemaList sorting *************************************************************/
+
+#sorting-container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 5rem;
+  font-weight: 700;
+}
+#sorting-by-city {
+  margin-top: 10.5rem;
+  text-align: right;
+}
+#cities-selector {
+  border-radius: 4rem;
+  padding: 0.1rem;
+  font-family: "Montserrat", sans-serif;
+}
+#sorting-container2 {
+  display: grid;
+  grid-template-rows: 2rem 3rem;
+  gap: 0;
+  margin-top: 7rem;
+}
+#sorting-by-score {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 7rem 7rem 7rem 7rem;
+}
+
+.sorting-image svg {
+  width: 4.5rem;
+}
+.sorting:hover > .sorting-image > svg > path {
+  fill: var(--umber);
+}
+.sorting:hover > p {
+  color: var(--umber);
+}
+
+.sorting {
+  cursor: pointer;
+}
+#sort-by-comfort-container p {
+  padding-top: 0.75rem;
+}
+#sort-by-overall-container p {
+  padding-top: 0.6rem;
+}
+#sort-by-price-container p {
+  padding-top: 0.8rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .sorting-image svg {
+    width: 2.5rem;
+  }
+  #sorting-by-score {
+    grid-template-columns: 4rem 4rem 4rem 4rem;
+  }
+  #price-svg {
+    width: 1.7rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #sorting-container {
+    grid-template-columns: 1fr;
+  }
+  #sorting-by-city {
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  #sorting-by-score {
+    text-align: center;
+    margin: auto;
+  }
+  #sorting-container2 p {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+  }
+  #sorting-container2 {
+    margin: 0;
+    padding: 0;
+  }
+  #sorting-container {
+    gap: 0;
+  }
+  #sort-by-snacks-container p {
+    transform: translateY(-0.7rem);
+  }
+}
+
+/*************************************************** cinemaList sorting *************************************************************/
+/*************************************************** cinemaList list *************************************************************/
+#list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.cinema {
+  position: relative;
+  margin: auto;
+}
+
+.cinema img {
+  position: relative;
+  width: 25rem;
+  filter: brightness(0.7);
+}
+.imperial-ratings-container {
+  display: grid;
+  grid-template-columns: 14rem 1fr 1fr 1fr;
+}
+.imperial-ratings-container h3 {
+  text-align: left;
+  font-size: 2rem;
+}
+.imperial-ratings-container svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.overall-circle {
+  position: absolute;
+  bottom: 1.1rem;
+  right: 0.2rem;
+  width: 3rem;
+  z-index: 3;
+}
+.overall-rating {
+  position: absolute;
+  bottom: 14.3rem;
+  right: -1rem;
+  font-size: 2rem;
+  z-index: 3;
+  font-family: "Acme", sans-serif;
+  background-color: var(--harlequin);
+  width: 3.5rem;
+  height: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  border: solid black 3px;
+}
+.price-rating {
+  position: absolute;
+  bottom: 0;
+  right: 1.5rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+}
+.snack-rating {
+  position: absolute;
+  bottom: 0;
+  right: 5.1rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+}
+.comfort-rating {
+  position: absolute;
+  bottom: 0;
+  right: 8.8rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+}
+#overall-path {
+  fill: var(--harlequin);
+}
+#comfort-path1 {
+  fill: var(--selectiveyellow);
+}
+#snack-path1 {
+  fill: var(--harlequin);
+}
+#price-path1 {
+  fill: red;
+}
+
+/*************************************************** cinemaList *************************************************************/

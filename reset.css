@@ -1,9 +1,9 @@
 :root {
   --umber: #8a2c2a;
   --codgray: #171717;
-  --crimson: #d92121;
-  --gunpowder: #5c6075;
-  --harlequin: #52ff00;
+  --crimson: #c41d1d;
+  --gunpowder: #46495b;
+  --harlequin: #45db00;
   --selectiveyellow: #ffb800;
   --codgray-light: #130f0f;
   --white: #ffffff;
@@ -24,7 +24,8 @@ body {
   -webkit-font-feature-settings: "pnum";
   font-feature-settings: "pnum";
   font-variant-numeric: proportional-nums;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-style: normal;
