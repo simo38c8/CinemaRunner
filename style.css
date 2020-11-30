@@ -12,6 +12,7 @@ body {
   width: 100%;
   height: 5rem;
   background-color: var(--umber);
+  z-index: 2;
 }
 #header-container a {
   cursor: pointer;
@@ -289,7 +290,7 @@ body {
 
 .movie-list {
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 .flickity-button:hover {
   background: var(--umber);
