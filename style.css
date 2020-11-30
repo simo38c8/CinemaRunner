@@ -279,6 +279,53 @@ body {
 
 /*************************************************** movie-list *************************************************************/
 
+.flickity-button:hover {
+  background: var(--umber);
+}
+
+.carousel-cell {
+  margin: 4rem 2rem 4rem 2rem;
+  transition: transform 0.3s linear;
+  cursor: pointer;
+}
+
+.carousel-cell img {
+  height: 400px;
+  width: 250px;
+}
+
+.movie-card {
+  background-color: var(--codgray-light);
+  padding: 0.5rem 1rem 1rem 1rem;
+  position: relative;
+  margin-top: -2rem;
+  max-width: 250px;
+  height: 120px;
+}
+
+.movie-card h3 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 300px;
+}
+
+.movie-card h5 {
+  color: var(--crimson);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 300px;
+}
+
+.movie-card p {
+  color: var(--gunpowder);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 300px;
+}
+
 /*************************************************** movie-list *************************************************************/
 
 /*************************************************** footer *************************************************************/
