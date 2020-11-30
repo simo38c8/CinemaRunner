@@ -287,6 +287,10 @@ body {
 
 /*************************************************** movie-list *************************************************************/
 
+.movie-list {
+  position: relative;
+  z-index: -1;
+}
 .flickity-button:hover {
   background: var(--umber);
 }
