@@ -584,7 +584,7 @@ body {
 #list-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 3rem;
 }
 .cinema {
   position: relative;
@@ -594,6 +594,7 @@ body {
 .cinema img {
   position: relative;
   width: 25rem;
+  max-height: 13rem;
   filter: brightness(0.7);
 }
 .imperial-ratings-container {
@@ -622,7 +623,7 @@ body {
   font-size: 2rem;
   z-index: 3;
   font-family: "Acme", sans-serif;
-  background-color: var(--harlequin);
+
   width: 3.5rem;
   height: 3rem;
   padding-bottom: 3rem;
@@ -651,17 +652,15 @@ body {
   font-size: 2rem;
   font-family: "Acme", sans-serif;
 }
-#overall-path {
-  fill: var(--harlequin);
-}
-#comfort-path1 {
+
+#yellow {
   fill: var(--selectiveyellow);
 }
-#snack-path1 {
+#green {
   fill: var(--harlequin);
 }
-#price-path1 {
-  fill: red;
+#red {
+  fill: var(--crimson);
 }
 
 /*************************************************** cinemaList *************************************************************/

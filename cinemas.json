@@ -1,0 +1,62 @@
+[
+  {
+    "name": "imperial",
+    "image": "imperial.jpg",
+    "overallRating": 4,
+    "overallColor": "var(--harlequin)",
+    "comfortRating": 4,
+    "comfortColor": "green",
+    "SnackRating": 4,
+    "SnackColor": "green",
+    "priceRating": 3,
+    "PriceColor": "yellow"
+  },
+  {
+    "name": "Cinemaxx",
+    "image": "cinemaxx.jpg",
+    "overallRating": 3,
+    "overallColor": "var(--selectiveyellow)",
+    "comfortRating": 2,
+    "comfortColor": "red",
+    "SnackRating": 3,
+    "SnackColor": "yellow",
+    "priceRating": 3,
+    "PriceColor": "yellow"
+  },
+  {
+    "name": "Big Bio",
+    "image": "bigbio.jpg",
+    "overallRating": 2,
+    "overallColor": "var(--crimson)",
+    "comfortRating": 5,
+    "comfortColor": "green",
+    "SnackRating": 2,
+    "SnackColor": "red",
+    "priceRating": 3,
+    "PriceColor": "yellow"
+  },
+  {
+    "name": "Palads",
+    "image": "palads.jpg",
+    "overallRating": 2,
+    "overallColor": "var(--crimson)",
+    "comfortRating": 1,
+    "comfortColor": "red",
+    "SnackRating": 3,
+    "SnackColor": "yellow",
+    "priceRating": 2,
+    "PriceColor": "red"
+  },
+  {
+    "name": "Empire",
+    "image": "empire.jpg",
+    "overallRating": 3,
+    "overallColor": "var(--selectiveyellow)",
+    "comfortRating": 2,
+    "comfortColor": "red",
+    "SnackRating": 3,
+    "SnackColor": "yellow",
+    "priceRating": 3,
+    "PriceColor": "yellow"
+  }
+]
