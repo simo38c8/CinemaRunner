@@ -41,6 +41,49 @@ scrollHeader();
         .addEventListener("click", () => {
           sortByOverallRating(data);
         });
+
+      document
+        .querySelector("#sort-by-comfort-container")
+        .addEventListener("click", () => {
+          sortByOComfortRating(data);
+        });
+
+      document
+        .querySelector("#sort-by-snacks-container")
+        .addEventListener("click", () => {
+          sortBySnackRating(data);
+        });
+
+      document
+        .querySelector("#sort-by-price-container")
+        .addEventListener("click", () => {
+          sortByPriceRating(data);
+        });
+
+      function sortByPriceRating(data) {
+        data.sort((a, b) => {
+          return a.priceRating - b.priceRating;
+        });
+        console.log("done");
+        showMovies();
+      }
+
+      function sortBySnackRating(data) {
+        data.sort((a, b) => {
+          return a.SnackRating - b.SnackRating;
+        });
+        console.log("done");
+        showMovies();
+      }
+
+      function sortByOComfortRating(data) {
+        data.sort((a, b) => {
+          return a.comfortRating - b.comfortRating;
+        });
+        console.log("done");
+        showMovies();
+      }
+
       function sortByOverallRating(data) {
         data.sort((a, b) => {
           return a.overallRating - b.overallRating;
