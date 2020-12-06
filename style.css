@@ -665,3 +665,167 @@ body {
 }
 
 /*************************************************** cinemaList *************************************************************/
+
+/*************************************************** Cinema Overview *************************************************************/
+
+#cinema-information {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 5rem 2rem;
+}
+
+#cinema-information > div:nth-child(1) > div > img {
+  border-radius: 20px;
+  height: 20rem;
+  width: 20rem;
+}
+
+#cinema-information > div:nth-child(1) > div > h4:nth-child(3) {
+  padding-top: 4rem;
+}
+
+#three-rating {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 7rem;
+  margin: 2rem 4rem 2rem 14rem;
+}
+
+#three-rating > div > svg {
+  width: 5rem;
+  height: 5rem;
+}
+#cinema-information > div:nth-child(2) > div > div:nth-child(1) {
+  text-align: center;
+}
+#cinema-information > div:nth-child(2) > div > div:nth-child(1) > svg {
+  width: 10rem;
+  height: 10rem;
+  display: block;
+  margin: auto;
+}
+
+#cinema-information > div:nth-child(2) > h3 {
+  padding-bottom: 1rem;
+}
+
+iframe {
+  width: 100%;
+  height: 18rem;
+}
+
+#create-review {
+  text-align: center;
+  justify-content: center;
+  padding: 1rem 20rem;
+  padding-bottom: 5rem;
+}
+
+#create-review button {
+  height: 4rem;
+  width: 15rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+  border-radius: 3rem;
+  background-color: var(--crimson);
+  border: 0;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+#reviews > div:nth-child(1) {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  padding-left: 2rem;
+}
+
+.review:nth-child(odd) {
+  background-color: var(--codgray-light);
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  padding: 2rem;
+  grid-gap: 3rem;
+  width: 100%;
+}
+
+.review > div:nth-child(1) > img {
+  height: 6rem;
+  border-radius: 100px;
+  width: 6rem;
+}
+
+.review > div:nth-child(3) > img {
+  padding-left: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.review > div:nth-child(3) > img:hover {
+  filter: invert(100%) sepia() saturate(7000%) hue-rotate(0deg);
+}
+
+.review > div:nth-child(3) {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.review > div:nth-child(2) > div > svg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.review:last-child {
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 950px) {
+  #cinema-information {
+    display: block;
+    padding: 0rem 2rem 2rem 2rem;
+  }
+
+  #cinema-information > div:nth-child(1) > div > h4:nth-child(3) {
+    padding-top: 1rem;
+  }
+
+  #cinema-information > div:nth-child(2) > div {
+    padding-top: 2rem;
+  }
+  #three-rating {
+    margin: 0;
+    padding: 1rem 0rem;
+  }
+
+  #movie-list h2 {
+    padding-left: 2rem;
+  }
+  #create-review {
+    padding: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .review {
+    display: block;
+    text-align: center;
+  }
+
+  .review > div:nth-child(3) {
+    padding-top: 1rem;
+  }
+
+  .review > div:nth-child(3) > img {
+    margin: 0.5rem 0rem;
+  }
+
+  #reviews > div:nth-child(1) {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+/*************************************************** Cinema Overview *************************************************************/
