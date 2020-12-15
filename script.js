@@ -12,53 +12,27 @@ function closeMobileMenu() {
   document.querySelector("#mobile-menu").style.display = "none";
 }
 
-function scrollHeader() {
-  let scrollpos = window.scrollY;
-
-  window.addEventListener("scroll", function () {
-    scrollpos = window.scrollY;
-
-    console.log(scrollpos);
-    if (scrollpos >= 650) {
-      document.querySelector("#header-container").style.backgroundColor =
-        "#8a2c2a";
-    } else {
-      document.querySelector("#header-container").style.backgroundColor =
-        "transparent";
-    }
-  });
-}
-scrollHeader();
-
 (function getMovieList() {
   fetch("./cinemas.json")
     .then((response) => {
       return response.json();
     })
     .then((data) => {
-      document
-        .querySelector("#sort-by-overall-container")
-        .addEventListener("click", () => {
-          sortByOverallRating(data);
-        });
+      document.querySelector("#sort-by-overall-container").addEventListener("click", () => {
+        sortByOverallRating(data);
+      });
 
-      document
-        .querySelector("#sort-by-comfort-container")
-        .addEventListener("click", () => {
-          sortByOComfortRating(data);
-        });
+      document.querySelector("#sort-by-comfort-container").addEventListener("click", () => {
+        sortByOComfortRating(data);
+      });
 
-      document
-        .querySelector("#sort-by-snacks-container")
-        .addEventListener("click", () => {
-          sortBySnackRating(data);
-        });
+      document.querySelector("#sort-by-snacks-container").addEventListener("click", () => {
+        sortBySnackRating(data);
+      });
 
-      document
-        .querySelector("#sort-by-price-container")
-        .addEventListener("click", () => {
-          sortByPriceRating(data);
-        });
+      document.querySelector("#sort-by-price-container").addEventListener("click", () => {
+        sortByPriceRating(data);
+      });
 
       function sortByPriceRating(data) {
         data.sort((a, b) => {
@@ -248,9 +222,7 @@ scrollHeader();
 </div>
 </div>`;
 
-          document
-            .querySelector("#list-container")
-            .insertAdjacentHTML("afterbegin", content);
+          document.querySelector("#list-container").insertAdjacentHTML("afterbegin", content);
         }
       }
     });

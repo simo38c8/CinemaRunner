@@ -17,7 +17,7 @@
   <body>
    
     <header>
-      <div id="header-container">
+      <div id="header-container" class="transparent">
         <div id="logo-container"></div>
         <a href="cinemas.html">Cinemas</a>
         <a href="cinema-overview.html">Movies</a>
@@ -125,7 +125,25 @@
 
     <script src="https://kit.fontawesome.com/714c24be39.js" crossorigin="anonymous"></script>
 
+  <script>
+  function scrollHeader() {
+  let scrollpos = window.scrollY;
 
+  window.addEventListener("scroll", function () {
+    scrollpos = window.scrollY;
+
+    console.log(scrollpos);
+    if (scrollpos >= 650) {
+      document.querySelector("#header-container").style.backgroundColor =
+        "#8a2c2a";
+    } else {
+      document.querySelector("#header-container").style.backgroundColor =
+        "transparent";
+    }
+  });
+}
+scrollHeader();
+</script>
   
   </body>
 </html>
