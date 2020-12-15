@@ -101,8 +101,9 @@ scrollHeader();
 <p class="price-rating">${data[i].priceRating}</p>
 <p class="snack-rating">${data[i].SnackRating}</p>
 <p class="comfort-rating">${data[i].comfortRating}</p>
-
+<a href="cinema-overview.html">
 <img src="${data[i].image}" alt="" />
+</a>
 <div class="imperial-ratings-container">
   <h3>${data[i].name}</h3>
   <svg
