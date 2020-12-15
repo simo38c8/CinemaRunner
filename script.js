@@ -276,7 +276,6 @@ function goBack() {
 document.querySelector("#create-review").addEventListener("click", starterReview);
 
 function starterReview() {
-  reviewBackButton.textContent = "Exit";
   document.querySelector("#review-section").style.display = "block";
   timeline1.style.fill = "#c41d1d";
   timeline2.style.fill = "white";
@@ -499,6 +498,8 @@ function nextReviewSubject3() {
   document.querySelector("#review-circle2").style.display = "none";
   document.querySelector("#review-circle3").style.display = "none";
   document.querySelector("#svg-container").style.display = "block";
+  reviewNextButton.style.backgroundColor = "#46495b";
+  reviewNextButton.textContent = "Next";
   setTimeout(function () {
     document.querySelector("#lineOne").addEventListener("click", reviewOne);
     document.querySelector("#lineTwo").addEventListener("click", reviewTwo);
@@ -567,6 +568,7 @@ function nextReviewSubject4() {
   timeline5.style.fill = "white";
   reviewText1.textContent = "Comment";
   reviewText2.textContent = "Describe your overall experience in the cinema";
+
   reviewCircle.innerHTML = "";
   reviewCircle.style.height = "0";
   document.querySelector("#review-circle2").style.display = "none";
@@ -574,9 +576,6 @@ function nextReviewSubject4() {
 
   document.querySelector("#textarea-container").style.display = "block";
   document.querySelector("#svg-container").style.display = "block";
-  console.log(comfortNumber);
-  console.log(snackNumber);
-  console.log(priceNumber);
 }
 function nextReviewSubject5() {
   timeline1.style.fill = "#c41d1d";
@@ -584,6 +583,7 @@ function nextReviewSubject5() {
   timeline3.style.fill = "#c41d1d";
   timeline4.style.fill = "#c41d1d";
   timeline5.style.fill = "#c41d1d";
+
   reviewText1.textContent = "Overview";
   reviewText2.textContent = "";
   document.querySelector("#review-circle2").style.display = "block";

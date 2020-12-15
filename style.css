@@ -986,6 +986,7 @@ iframe {
   font-family: "Montserrat", sans-serif;
   margin: auto;
   border-radius: 20px;
+  padding: 1rem;
 }
 #textarea-container {
   display: none;
@@ -1003,6 +1004,10 @@ iframe {
   display: none;
   width: 13rem;
   height: 20rem;
+}
+
+.hidden {
+  display: block;
 }
 #review-back-button {
   height: 4rem;
