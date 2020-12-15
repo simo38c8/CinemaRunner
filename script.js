@@ -1,6 +1,10 @@
 let mobileMenubutton = document.querySelector("#mobile-menu-button");
 let mobileMenuClosebutton = document.querySelector("#close-menu-button");
 
+let comfortNumber = 1;
+let snackNumber = 1;
+let priceNumber = 1;
+
 mobileMenubutton.addEventListener("click", openMobileMenu);
 mobileMenuClosebutton.addEventListener("click", closeMobileMenu);
 
@@ -284,13 +288,17 @@ function starterReview() {
   reviewCircle.innerHTML = `
     <title>circle_comfort</title>
   <g>
-  <path id="line5" d="M44.8,74.2h0a10,10,0,0,1-1.37-14.53,145.43,145.43,0,0,1,98.42-48.4,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.62,125.62,0,0,0,58.31,73,10,10,0,0,1,44.8,74.2Z" />
+  <path id="lineFive" d="M44.8,74.2h0a10,10,0,0,1-1.37-14.53,145.43,145.43,0,0,1,98.42-48.4,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.62,125.62,0,0,0,58.31,73,10,10,0,0,1,44.8,74.2Z" />
 
-  <path id="line4" d="M14.2,198.68A10,10,0,0,1,2,190.63a147.47,147.47,0,0,1-2-24.12A145.05,145.05,0,0,1,24.35,85.56,10,10,0,0,1,38.8,83.2h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,166.51a127.37,127.37,0,0,0,1.73,20.92,10,10,0,0,1-7.53,11.25Z" "/>
-  <path id="line3" d="M75.32,305.94A146.18,146.18,0,0,1,10,224.49a10,10,0,0,1,7.16-12.81h0a10,10,0,0,1,11.86,6.62,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,305.94Z" />
-  <path id="line2" class="one" d="M156.64,329.15a145.39,145.39,0,0,1-55-10.66,10,10,0,0,1-5.27-13.73h0a10,10,0,0,1,12.67-4.86,127,127,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.43,145.73,145.73,0,0,1-48,8" /> 
+  <path id="lineFour" d="M14.2,198.68A10,10,0,0,1,2,190.63a147.47,147.47,0,0,1-2-24.12A145.05,145.05,0,0,1,24.35,85.56,10,10,0,0,1,38.8,83.2h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,166.51a127.37,127.37,0,0,0,1.73,20.92,10,10,0,0,1-7.53,11.25Z" "/>
+  <path id="lineThree" d="M75.32,305.94A146.18,146.18,0,0,1,10,224.49a10,10,0,0,1,7.16-12.81h0a10,10,0,0,1,11.86,6.62,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,305.94Z" />
+  <path id="lineTwo" d="M156.64,329.15a145.39,145.39,0,0,1-55-10.66,10,10,0,0,1-5.27-13.73h0a10,10,0,0,1,12.67-4.86,127,127,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.43,145.73,145.73,0,0,1-48,8" /> 
   
-  <g id="line1" class="one">
+  <foreignobject class="node" x="106" y="22" width="300" height="300">
+                
+  <p class="review-number">1</p>               
+</foreignobject>
+  <g id="lineOne">
   <path d="M217.58,303.68h0a10,10,0,0,1,4.53-12.8,126.56,126.56,0,0,0,68.17-112.36c0-1.08,0-2.14-.06-3.21V175l20-.55v.34c0,1.26.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,303.68Z" />
   <path d="M299,164.42h0a10.17,10.17,0,0,0-8.7,10.22c1.33,32.6-10.88,64.9-34.19,89.77a132.25,132.25,0,0,1-28.3,22.85c-.91.55-1.83,1.08-2.76,1.6l-.3.17L234,305.45l.3-.17c1.08-.62,2.16-1.23,3.24-1.88A153.16,153.16,0,0,0,270.32,277c27-28.79,41.11-66.16,39.6-103.88A9.23,9.23,0,0,0,299,164.42Z" />
   </g>
@@ -302,6 +310,65 @@ function starterReview() {
   document.querySelector("#textarea-container").style.display = "none";
   document.querySelector("#review-circle2").style.display = "none";
   document.querySelector("#review-circle3").style.display = "none";
+  setTimeout(function () {
+    document.querySelector("#lineOne").addEventListener("click", reviewOne);
+    document.querySelector("#lineTwo").addEventListener("click", reviewTwo);
+    document.querySelector("#lineThree").addEventListener("click", reviewThree);
+    document.querySelector("#lineFour").addEventListener("click", reviewFour);
+    document.querySelector("#lineFive").addEventListener("click", reviewFive);
+
+    function reviewOne() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineTwo").style.fill = "";
+      svgParent.querySelector("#lineThree").style.fill = "";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      comfortNumber = svgParent.querySelector(".review-number").textContent;
+      console.log(comfortNumber);
+    }
+    function reviewTwo() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineTwo").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineThree").style.fill = "";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      comfortNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewThree() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#ffb800";
+      svgParent.querySelector("#lineTwo").style.fill = "#ffb800";
+      svgParent.querySelector("#lineThree").style.fill = "#ffb800";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      comfortNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewFour() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#45db00";
+      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
+      svgParent.querySelector("#lineThree").style.fill = "#45db00";
+      svgParent.querySelector("#lineFour").style.fill = "#45db00";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      comfortNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewFive() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#45db00";
+      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
+      svgParent.querySelector("#lineThree").style.fill = "#45db00";
+      svgParent.querySelector("#lineFour").style.fill = "#45db00";
+      svgParent.querySelector("#lineFive").style.fill = "#45db00";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      comfortNumber = svgParent.querySelector(".review-number").textContent;
+    }
+  }, 100);
 }
 
 function nextReviewSubject2() {
@@ -323,11 +390,15 @@ function nextReviewSubject2() {
         <path d="M194,32.32c-.69,1.68-2.06.84-3.67.84-9.16-.21-7.1-7.6-8.24-12C180.21,14,188,8,195.56,10.78c5.27,2.11,10.31,4.65,16.26,5.49,2.52.42,5.5,2.53,4.58,6.76C207.24,22.82,198.31,23.45,194,32.32Z" style="fill: #fff"/>
         <path d="M219.38,0c5.73,0,8.7,4,12.6,6.76-4.13,3.38-3,9.92-6.87,12.45-3.67,2.33-3.9-4-6.88-5.27l-6.87-3.17c-1.83-.85-3.66-1.27-3.2-3.17C210,2.33,213.88-.2,219.38,0Z" style="fill: #fff"/>
       </g>
-      <path id="line5" d="M44.8,79.52h0A10,10,0,0,1,43.42,65a145.43,145.43,0,0,1,98.42-48.4,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.62,125.62,0,0,0,58.31,78.33,10,10,0,0,1,44.8,79.52Z" />
-      <path id="line4" d="M14.2,204A10,10,0,0,1,2,196a147.38,147.38,0,0,1-2-24.12,145.05,145.05,0,0,1,24.35-81A10,10,0,0,1,38.8,88.52h0a10,10,0,0,1,2.26,13.36,125.25,125.25,0,0,0-21.06,70,127.28,127.28,0,0,0,1.73,20.92A10,10,0,0,1,14.2,204Z"/>
-      <path id="line3" d="M75.32,311.26A146.15,146.15,0,0,1,10,229.81,10,10,0,0,1,17.2,217h0a10,10,0,0,1,11.86,6.62,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,311.26Z" />
-      <path id="line2" d="M156.64,334.47a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.12,127.12,0,0,0,89.12,2.28,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.43,145.73,145.73,0,0,1-48,8" />
-      <g id="line1">
+      <path id="lineFive" d="M44.8,79.52h0A10,10,0,0,1,43.42,65a145.43,145.43,0,0,1,98.42-48.4,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.62,125.62,0,0,0,58.31,78.33,10,10,0,0,1,44.8,79.52Z" />
+      <path id="lineFour" d="M14.2,204A10,10,0,0,1,2,196a147.38,147.38,0,0,1-2-24.12,145.05,145.05,0,0,1,24.35-81A10,10,0,0,1,38.8,88.52h0a10,10,0,0,1,2.26,13.36,125.25,125.25,0,0,0-21.06,70,127.28,127.28,0,0,0,1.73,20.92A10,10,0,0,1,14.2,204Z"/>
+      <path id="lineThree" d="M75.32,311.26A146.15,146.15,0,0,1,10,229.81,10,10,0,0,1,17.2,217h0a10,10,0,0,1,11.86,6.62,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,311.26Z" />
+      <path id="lineTwo" d="M156.64,334.47a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.12,127.12,0,0,0,89.12,2.28,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.43,145.73,145.73,0,0,1-48,8" />
+      <foreignobject class="node" x="106" y="32" width="300" height="300">
+                
+      <p class="review-number">1</p>               
+  </foreignobject>
+      <g id="lineOne">
         <path d="M217.58,309h0a10,10,0,0,1,4.53-12.81,126.54,126.54,0,0,0,68.17-112.36c0-1.07,0-2.14-.06-3.21v-.35l20-.55v.35c0,1.25.07,2.5.07,3.76a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,309Z" />
         <path d="M299,169.74h0a10.17,10.17,0,0,0-8.7,10.22c1.33,32.6-10.88,64.9-34.19,89.78a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.59l-.3.17L234,310.77l.3-.17c1.08-.61,2.16-1.23,3.24-1.88a153.16,153.16,0,0,0,32.75-26.45c27-28.79,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,169.74Z" />
       </g>
@@ -336,6 +407,64 @@ function nextReviewSubject2() {
   document.querySelector("#review-circle2").style.display = "none";
   document.querySelector("#review-circle3").style.display = "none";
   document.querySelector("#svg-container").style.display = "block";
+  setTimeout(function () {
+    document.querySelector("#lineOne").addEventListener("click", reviewOne);
+    document.querySelector("#lineTwo").addEventListener("click", reviewTwo);
+    document.querySelector("#lineThree").addEventListener("click", reviewThree);
+    document.querySelector("#lineFour").addEventListener("click", reviewFour);
+    document.querySelector("#lineFive").addEventListener("click", reviewFive);
+
+    function reviewOne() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineTwo").style.fill = "";
+      svgParent.querySelector("#lineThree").style.fill = "";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      snackNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewTwo() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineTwo").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineThree").style.fill = "";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      snackNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewThree() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#ffb800";
+      svgParent.querySelector("#lineTwo").style.fill = "#ffb800";
+      svgParent.querySelector("#lineThree").style.fill = "#ffb800";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      snackNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewFour() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#45db00";
+      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
+      svgParent.querySelector("#lineThree").style.fill = "#45db00";
+      svgParent.querySelector("#lineFour").style.fill = "#45db00";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      snackNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewFive() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#45db00";
+      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
+      svgParent.querySelector("#lineThree").style.fill = "#45db00";
+      svgParent.querySelector("#lineFour").style.fill = "#45db00";
+      svgParent.querySelector("#lineFive").style.fill = "#45db00";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      snackNumber = svgParent.querySelector(".review-number").textContent;
+    }
+  }, 100);
 }
 
 function nextReviewSubject3() {
@@ -352,11 +481,15 @@ function nextReviewSubject3() {
     <path d="M290.74,177.61,265.43,189.1c-2.27-4.34-4.54-8.67-6.7-12.75-42.23,3.08-57.43-2.83-64.26-25.95l23-10.45c9.69,4.54,17.91,8.55,26.4,12.45.67-1.2,1.46-2.16,2.14-3.36l-16.15-35.57c-24,4.33-47.78,7.68-60.22-19.74-12.56-27.66,0-47.67,22.58-63.87-2.78-6.78-5.1-12.58-7.43-18.38L210.13,0l8.07,17.79c39.54-1,54.56,5.92,59.15,26.77L254.07,55.13c-7.36-4.11-13.51-7.57-19.55-10.79-.79.95-1.71,2.27-2.5,3.22,2.24,4.94,4.88,9.41,6.61,14.58,3.84,13.15,10.55,17.85,25.81,14.5,22.63-4.61,36.13,3,44.74,19.91,9.39,18.68,6.64,37.5-7.82,52.7-4.95,5.23-10.49,9.83-15.55,14.81C287.54,169.23,289.08,173.3,290.74,177.61Zm-17-39.37c10.13-7.28,13.59-15.11,8.83-24.27-4.66-8.91-13.06-9.26-22.28-5.38ZM216.32,83.58,203.66,55.67c-8.47,6.22-12.5,12.82-8,22.09C200.08,86.78,207.22,87.72,216.32,83.58Z" style="fill: #fff"/>
   
   
-    <path id="line5" d="M44.8,97.08h0a10,10,0,0,1-1.37-14.54,145.42,145.42,0,0,1,98.42-48.39,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.67,125.67,0,0,0,58.31,95.9,10,10,0,0,1,44.8,97.08Z"/>
-    <path id="line4" d="M14.2,221.56a10,10,0,0,1-12.21-8A147.56,147.56,0,0,1,0,189.4a145.05,145.05,0,0,1,24.35-80.95,10,10,0,0,1,14.45-2.36h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,189.4a127.25,127.25,0,0,0,1.73,20.91,10,10,0,0,1-7.53,11.25Z" />
-    <path id="line3" d="M75.32,328.83A146.18,146.18,0,0,1,10,247.38a10,10,0,0,1,7.16-12.82h0a10,10,0,0,1,11.86,6.63,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,328.83Z"/>
-    <path id="line2" d="M156.64,352a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.19,127.19,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.44,146,146,0,0,1-48,8"/>
-    <g id="line1">
+    <path id="lineFive" d="M44.8,97.08h0a10,10,0,0,1-1.37-14.54,145.42,145.42,0,0,1,98.42-48.39,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.67,125.67,0,0,0,58.31,95.9,10,10,0,0,1,44.8,97.08Z"/>
+    <path id="lineFour" d="M14.2,221.56a10,10,0,0,1-12.21-8A147.56,147.56,0,0,1,0,189.4a145.05,145.05,0,0,1,24.35-80.95,10,10,0,0,1,14.45-2.36h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,189.4a127.25,127.25,0,0,0,1.73,20.91,10,10,0,0,1-7.53,11.25Z" />
+    <path id="lineThree" d="M75.32,328.83A146.18,146.18,0,0,1,10,247.38a10,10,0,0,1,7.16-12.82h0a10,10,0,0,1,11.86,6.63,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,328.83Z"/>
+    <path id="lineTwo" d="M156.64,352a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.19,127.19,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.44,146,146,0,0,1-48,8"/>
+    <foreignobject class="node" x="106" y="45" width="300" height="300">
+                
+    <p class="review-number">1</p>               
+</foreignobject>
+    <g id="lineOne">
       <path d="M217.58,326.57h0a10,10,0,0,1,4.53-12.8A126.56,126.56,0,0,0,290.28,201.4c0-1.08,0-2.14-.06-3.21v-.35l20-.56v.35c0,1.25.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,326.57Z"/>
       <path d="M299,187.3h0a10.18,10.18,0,0,0-8.7,10.23c1.33,32.59-10.88,64.89-34.19,89.77a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.6l-.3.17L234,328.33l.3-.17c1.08-.61,2.16-1.22,3.24-1.87a153.16,153.16,0,0,0,32.75-26.45c27-28.8,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,187.3Z" />
     </g>
@@ -366,6 +499,64 @@ function nextReviewSubject3() {
   document.querySelector("#review-circle2").style.display = "none";
   document.querySelector("#review-circle3").style.display = "none";
   document.querySelector("#svg-container").style.display = "block";
+  setTimeout(function () {
+    document.querySelector("#lineOne").addEventListener("click", reviewOne);
+    document.querySelector("#lineTwo").addEventListener("click", reviewTwo);
+    document.querySelector("#lineThree").addEventListener("click", reviewThree);
+    document.querySelector("#lineFour").addEventListener("click", reviewFour);
+    document.querySelector("#lineFive").addEventListener("click", reviewFive);
+
+    function reviewOne() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineTwo").style.fill = "";
+      svgParent.querySelector("#lineThree").style.fill = "";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      priceNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewTwo() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineTwo").style.fill = "#8a2c2a";
+      svgParent.querySelector("#lineThree").style.fill = "";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      priceNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewThree() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#ffb800";
+      svgParent.querySelector("#lineTwo").style.fill = "#ffb800";
+      svgParent.querySelector("#lineThree").style.fill = "#ffb800";
+      svgParent.querySelector("#lineFour").style.fill = "";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      priceNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewFour() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#45db00";
+      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
+      svgParent.querySelector("#lineThree").style.fill = "#45db00";
+      svgParent.querySelector("#lineFour").style.fill = "#45db00";
+      svgParent.querySelector("#lineFive").style.fill = "";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      pricetNumber = svgParent.querySelector(".review-number").textContent;
+    }
+    function reviewFive() {
+      let svgParent = event.target.parentElement.parentElement;
+      svgParent.querySelector("#lineOne").style.fill = "#45db00";
+      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
+      svgParent.querySelector("#lineThree").style.fill = "#45db00";
+      svgParent.querySelector("#lineFour").style.fill = "#45db00";
+      svgParent.querySelector("#lineFive").style.fill = "#45db00";
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      priceNumber = svgParent.querySelector(".review-number").textContent;
+    }
+  }, 100);
 }
 
 function nextReviewSubject4() {
@@ -383,6 +574,9 @@ function nextReviewSubject4() {
 
   document.querySelector("#textarea-container").style.display = "block";
   document.querySelector("#svg-container").style.display = "block";
+  console.log(comfortNumber);
+  console.log(snackNumber);
+  console.log(priceNumber);
 }
 function nextReviewSubject5() {
   timeline1.style.fill = "#c41d1d";
@@ -400,13 +594,17 @@ function nextReviewSubject5() {
   <title>circle_price</title>
   <g>
     <path d="M290.74,177.61,265.43,189.1c-2.27-4.34-4.54-8.67-6.7-12.75-42.23,3.08-57.43-2.83-64.26-25.95l23-10.45c9.69,4.54,17.91,8.55,26.4,12.45.67-1.2,1.46-2.16,2.14-3.36l-16.15-35.57c-24,4.33-47.78,7.68-60.22-19.74-12.56-27.66,0-47.67,22.58-63.87-2.78-6.78-5.1-12.58-7.43-18.38L210.13,0l8.07,17.79c39.54-1,54.56,5.92,59.15,26.77L254.07,55.13c-7.36-4.11-13.51-7.57-19.55-10.79-.79.95-1.71,2.27-2.5,3.22,2.24,4.94,4.88,9.41,6.61,14.58,3.84,13.15,10.55,17.85,25.81,14.5,22.63-4.61,36.13,3,44.74,19.91,9.39,18.68,6.64,37.5-7.82,52.7-4.95,5.23-10.49,9.83-15.55,14.81C287.54,169.23,289.08,173.3,290.74,177.61Zm-17-39.37c10.13-7.28,13.59-15.11,8.83-24.27-4.66-8.91-13.06-9.26-22.28-5.38ZM216.32,83.58,203.66,55.67c-8.47,6.22-12.5,12.82-8,22.09C200.08,86.78,207.22,87.72,216.32,83.58Z" style="fill: #fff"/>
-    <path id="line2" d="M156.64,352a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.19,127.19,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.44,146,146,0,0,1-48,8" style="fill: #3e3e3d"/>
-    <path id="line3" d="M75.32,328.83A146.18,146.18,0,0,1,10,247.38a10,10,0,0,1,7.16-12.82h0a10,10,0,0,1,11.86,6.63,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,328.83Z" style="fill: #3e3e3d"/>
-    <path id="line5" d="M44.8,97.08h0a10,10,0,0,1-1.37-14.54,145.42,145.42,0,0,1,98.42-48.39,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.67,125.67,0,0,0,58.31,95.9,10,10,0,0,1,44.8,97.08Z" style="fill: #3e3e3d"/>
-    <path id="line4" d="M14.2,221.56a10,10,0,0,1-12.21-8A147.56,147.56,0,0,1,0,189.4a145.05,145.05,0,0,1,24.35-80.95,10,10,0,0,1,14.45-2.36h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,189.4a127.25,127.25,0,0,0,1.73,20.91,10,10,0,0,1-7.53,11.25Z" style="fill: #3e3e3d"/>
+    <path id="line2" d="M156.64,352a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.19,127.19,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.44,146,146,0,0,1-48,8" />
+    <path id="line3" d="M75.32,328.83A146.18,146.18,0,0,1,10,247.38a10,10,0,0,1,7.16-12.82h0a10,10,0,0,1,11.86,6.63,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,328.83Z" />
+    <path id="line5" d="M44.8,97.08h0a10,10,0,0,1-1.37-14.54,145.42,145.42,0,0,1,98.42-48.39,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.67,125.67,0,0,0,58.31,95.9,10,10,0,0,1,44.8,97.08Z" />
+    <path id="line4" d="M14.2,221.56a10,10,0,0,1-12.21-8A147.56,147.56,0,0,1,0,189.4a145.05,145.05,0,0,1,24.35-80.95,10,10,0,0,1,14.45-2.36h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,189.4a127.25,127.25,0,0,0,1.73,20.91,10,10,0,0,1-7.53,11.25Z"/>
+    <foreignobject class="node" x="106" y="42" width="300" height="300">
+                
+    <p class="review-number">${comfortNumber}</p>               
+</foreignobject>
     <g id="line1">
-      <path d="M217.58,326.57h0a10,10,0,0,1,4.53-12.8A126.56,126.56,0,0,0,290.28,201.4c0-1.08,0-2.14-.06-3.21v-.35l20-.56v.35c0,1.25.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,326.57Z" style="fill: #3e3e3d"/>
-      <path d="M299,187.3h0a10.18,10.18,0,0,0-8.7,10.23c1.33,32.59-10.88,64.89-34.19,89.77a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.6l-.3.17L234,328.33l.3-.17c1.08-.61,2.16-1.22,3.24-1.87a153.16,153.16,0,0,0,32.75-26.45c27-28.8,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,187.3Z" style="fill: #3e3e3d"/>
+      <path d="M217.58,326.57h0a10,10,0,0,1,4.53-12.8A126.56,126.56,0,0,0,290.28,201.4c0-1.08,0-2.14-.06-3.21v-.35l20-.56v.35c0,1.25.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,326.57Z" />
+      <path d="M299,187.3h0a10.18,10.18,0,0,0-8.7,10.23c1.33,32.59-10.88,64.89-34.19,89.77a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.6l-.3.17L234,328.33l.3-.17c1.08-.61,2.16-1.22,3.24-1.87a153.16,153.16,0,0,0,32.75-26.45c27-28.8,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,187.3Z" />
     </g>
   </g>`;
   document.querySelector("#review-circle2").innerHTML = `
@@ -419,30 +617,114 @@ function nextReviewSubject5() {
       <path d="M194,32.32c-.69,1.68-2.06.84-3.67.84-9.16-.21-7.1-7.6-8.24-12C180.21,14,188,8,195.56,10.78c5.27,2.11,10.31,4.65,16.26,5.49,2.52.42,5.5,2.53,4.58,6.76C207.24,22.82,198.31,23.45,194,32.32Z" style="fill: #fff"/>
       <path d="M219.38,0c5.73,0,8.7,4,12.6,6.76-4.13,3.38-3,9.92-6.87,12.45-3.67,2.33-3.9-4-6.88-5.27l-6.87-3.17c-1.83-.85-3.66-1.27-3.2-3.17C210,2.33,213.88-.2,219.38,0Z" style="fill: #fff"/>
     </g>
-    <path id="line2" d="M156.64,334.47a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.12,127.12,0,0,0,89.12,2.28,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.43,145.73,145.73,0,0,1-48,8" style="fill: #3e3e3d"/>
-    <path id="line3" d="M75.32,311.26A146.15,146.15,0,0,1,10,229.81,10,10,0,0,1,17.2,217h0a10,10,0,0,1,11.86,6.62,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,311.26Z" style="fill: #3e3e3d"/>
-    <path id="line5" d="M44.8,79.52h0A10,10,0,0,1,43.42,65a145.43,145.43,0,0,1,98.42-48.4,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.62,125.62,0,0,0,58.31,78.33,10,10,0,0,1,44.8,79.52Z" style="fill: #3e3e3d"/>
-    <path id="line4" d="M14.2,204A10,10,0,0,1,2,196a147.38,147.38,0,0,1-2-24.12,145.05,145.05,0,0,1,24.35-81A10,10,0,0,1,38.8,88.52h0a10,10,0,0,1,2.26,13.36,125.25,125.25,0,0,0-21.06,70,127.28,127.28,0,0,0,1.73,20.92A10,10,0,0,1,14.2,204Z" style="fill: #3e3e3d"/>
+    <path id="line2" d="M156.64,334.47a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.12,127.12,0,0,0,89.12,2.28,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.43,145.73,145.73,0,0,1-48,8" />
+    <path id="line3" d="M75.32,311.26A146.15,146.15,0,0,1,10,229.81,10,10,0,0,1,17.2,217h0a10,10,0,0,1,11.86,6.62,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,311.26Z" />
+    <path id="line5" d="M44.8,79.52h0A10,10,0,0,1,43.42,65a145.43,145.43,0,0,1,98.42-48.4,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.62,125.62,0,0,0,58.31,78.33,10,10,0,0,1,44.8,79.52Z" />
+    <path id="line4" d="M14.2,204A10,10,0,0,1,2,196a147.38,147.38,0,0,1-2-24.12,145.05,145.05,0,0,1,24.35-81A10,10,0,0,1,38.8,88.52h0a10,10,0,0,1,2.26,13.36,125.25,125.25,0,0,0-21.06,70,127.28,127.28,0,0,0,1.73,20.92A10,10,0,0,1,14.2,204Z" />
+    <foreignobject class="node" x="106" y="32" width="300" height="300">
+                
+    <p class="review-number">${snackNumber}</p>               
+</foreignobject>
     <g id="line1">
-      <path d="M217.58,309h0a10,10,0,0,1,4.53-12.81,126.54,126.54,0,0,0,68.17-112.36c0-1.07,0-2.14-.06-3.21v-.35l20-.55v.35c0,1.25.07,2.5.07,3.76a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,309Z" style="fill: #3e3e3d"/>
-      <path d="M299,169.74h0a10.17,10.17,0,0,0-8.7,10.22c1.33,32.6-10.88,64.9-34.19,89.78a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.59l-.3.17L234,310.77l.3-.17c1.08-.61,2.16-1.23,3.24-1.88a153.16,153.16,0,0,0,32.75-26.45c27-28.79,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,169.74Z" style="fill: #3e3e3d"/>
+      <path d="M217.58,309h0a10,10,0,0,1,4.53-12.81,126.54,126.54,0,0,0,68.17-112.36c0-1.07,0-2.14-.06-3.21v-.35l20-.55v.35c0,1.25.07,2.5.07,3.76a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,309Z" />
+      <path d="M299,169.74h0a10.17,10.17,0,0,0-8.7,10.22c1.33,32.6-10.88,64.9-34.19,89.78a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.59l-.3.17L234,310.77l.3-.17c1.08-.61,2.16-1.23,3.24-1.88a153.16,153.16,0,0,0,32.75-26.45c27-28.79,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,169.74Z" />
     </g>
   </g>`;
   document.querySelector("#review-circle3").innerHTML = `
   <title>circle_price</title>
   <g>
     <path d="M290.74,177.61,265.43,189.1c-2.27-4.34-4.54-8.67-6.7-12.75-42.23,3.08-57.43-2.83-64.26-25.95l23-10.45c9.69,4.54,17.91,8.55,26.4,12.45.67-1.2,1.46-2.16,2.14-3.36l-16.15-35.57c-24,4.33-47.78,7.68-60.22-19.74-12.56-27.66,0-47.67,22.58-63.87-2.78-6.78-5.1-12.58-7.43-18.38L210.13,0l8.07,17.79c39.54-1,54.56,5.92,59.15,26.77L254.07,55.13c-7.36-4.11-13.51-7.57-19.55-10.79-.79.95-1.71,2.27-2.5,3.22,2.24,4.94,4.88,9.41,6.61,14.58,3.84,13.15,10.55,17.85,25.81,14.5,22.63-4.61,36.13,3,44.74,19.91,9.39,18.68,6.64,37.5-7.82,52.7-4.95,5.23-10.49,9.83-15.55,14.81C287.54,169.23,289.08,173.3,290.74,177.61Zm-17-39.37c10.13-7.28,13.59-15.11,8.83-24.27-4.66-8.91-13.06-9.26-22.28-5.38ZM216.32,83.58,203.66,55.67c-8.47,6.22-12.5,12.82-8,22.09C200.08,86.78,207.22,87.72,216.32,83.58Z" style="fill: #fff"/>
-    <path id="line2" d="M156.64,352a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.19,127.19,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.44,146,146,0,0,1-48,8" style="fill: #3e3e3d"/>
-    <path id="line3" d="M75.32,328.83A146.18,146.18,0,0,1,10,247.38a10,10,0,0,1,7.16-12.82h0a10,10,0,0,1,11.86,6.63,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,328.83Z" style="fill: #3e3e3d"/>
-    <path id="line5" d="M44.8,97.08h0a10,10,0,0,1-1.37-14.54,145.42,145.42,0,0,1,98.42-48.39,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.67,125.67,0,0,0,58.31,95.9,10,10,0,0,1,44.8,97.08Z" style="fill: #3e3e3d"/>
-    <path id="line4" d="M14.2,221.56a10,10,0,0,1-12.21-8A147.56,147.56,0,0,1,0,189.4a145.05,145.05,0,0,1,24.35-80.95,10,10,0,0,1,14.45-2.36h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,189.4a127.25,127.25,0,0,0,1.73,20.91,10,10,0,0,1-7.53,11.25Z" style="fill: #3e3e3d"/>
+    <path id="line2" d="M156.64,352a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.19,127.19,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.44,146,146,0,0,1-48,8" />
+    <path id="line3" d="M75.32,328.83A146.18,146.18,0,0,1,10,247.38a10,10,0,0,1,7.16-12.82h0a10,10,0,0,1,11.86,6.63,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,328.83Z" />
+    <path id="line5" d="M44.8,97.08h0a10,10,0,0,1-1.37-14.54,145.42,145.42,0,0,1,98.42-48.39,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.67,125.67,0,0,0,58.31,95.9,10,10,0,0,1,44.8,97.08Z" />
+    <path id="line4" d="M14.2,221.56a10,10,0,0,1-12.21-8A147.56,147.56,0,0,1,0,189.4a145.05,145.05,0,0,1,24.35-80.95,10,10,0,0,1,14.45-2.36h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,189.4a127.25,127.25,0,0,0,1.73,20.91,10,10,0,0,1-7.53,11.25Z" />
+    <foreignobject class="node" x="106" y="45" width="300" height="300">
+                
+    <p class="review-number">${priceNumber}</p>               
+</foreignobject>
     <g id="line1">
-      <path d="M217.58,326.57h0a10,10,0,0,1,4.53-12.8A126.56,126.56,0,0,0,290.28,201.4c0-1.08,0-2.14-.06-3.21v-.35l20-.56v.35c0,1.25.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,326.57Z" style="fill: #3e3e3d"/>
-      <path d="M299,187.3h0a10.18,10.18,0,0,0-8.7,10.23c1.33,32.59-10.88,64.89-34.19,89.77a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.6l-.3.17L234,328.33l.3-.17c1.08-.61,2.16-1.22,3.24-1.87a153.16,153.16,0,0,0,32.75-26.45c27-28.8,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,187.3Z" style="fill: #3e3e3d"/>
+      <path d="M217.58,326.57h0a10,10,0,0,1,4.53-12.8A126.56,126.56,0,0,0,290.28,201.4c0-1.08,0-2.14-.06-3.21v-.35l20-.56v.35c0,1.25.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,326.57Z" />
+      <path d="M299,187.3h0a10.18,10.18,0,0,0-8.7,10.23c1.33,32.59-10.88,64.89-34.19,89.77a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.6l-.3.17L234,328.33l.3-.17c1.08-.61,2.16-1.22,3.24-1.87a153.16,153.16,0,0,0,32.75-26.45c27-28.8,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,187.3Z" />
     </g>
   </g>`;
 
   document.querySelector("#svg-container").style.display = "grid";
   document.querySelector("#svg-container").style.gridTemplateColumns = "15rem 15rem 15rem";
   document.querySelector("#svg-container").style.justifyContent = "center";
+
+  document.querySelector("#review-circle #line1").style.fill = "";
+  document.querySelector("#review-circle #line2").style.fill = "";
+  document.querySelector("#review-circle #line3").style.fill = "";
+  document.querySelector("#review-circle #line4").style.fill = "";
+  document.querySelector("#review-circle #line5").style.fill = "";
+  document.querySelector("#review-circle2 #line1").style.fill = "";
+  document.querySelector("#review-circle2 #line2").style.fill = "";
+  document.querySelector("#review-circle2 #line3").style.fill = "";
+  document.querySelector("#review-circle2 #line4").style.fill = "";
+  document.querySelector("#review-circle2 #line5").style.fill = "";
+  document.querySelector("#review-circle3 #line1").style.fill = "";
+  document.querySelector("#review-circle3 #line2").style.fill = "";
+  document.querySelector("#review-circle3 #line3").style.fill = "";
+  document.querySelector("#review-circle3 #line4").style.fill = "";
+  document.querySelector("#review-circle3 #line5").style.fill = "";
+
+  if (comfortNumber > 3) {
+    document.querySelector("#review-circle #line1").style.fill = "#45db00";
+    document.querySelector("#review-circle #line2").style.fill = "#45db00";
+    document.querySelector("#review-circle #line3").style.fill = "#45db00";
+    document.querySelector("#review-circle #line4").style.fill = "#45db00";
+    document.querySelector("#review-circle #line5").style.fill = "#45db00";
+  } else if (comfortNumber < 3) {
+    document.querySelector("#review-circle #line1").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle #line2").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle #line3").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle #line4").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle #line5").style.fill = "#8a2c2a";
+  } else {
+    document.querySelector("#review-circle #line1").style.fill = "#ffb800";
+    document.querySelector("#review-circle #line2").style.fill = "#ffb800";
+    document.querySelector("#review-circle #line3").style.fill = "#ffb800";
+    document.querySelector("#review-circle #line4").style.fill = "#ffb800";
+    document.querySelector("#review-circle #line5").style.fill = "#ffb800";
+  }
+
+  if (snackNumber > 3) {
+    document.querySelector("#review-circle2 #line1").style.fill = "#45db00";
+    document.querySelector("#review-circle2 #line2").style.fill = "#45db00";
+    document.querySelector("#review-circle2 #line3").style.fill = "#45db00";
+    document.querySelector("#review-circle2 #line4").style.fill = "#45db00";
+    document.querySelector("#review-circle2 #line5").style.fill = "#45db00";
+  } else if (snackNumber < 3) {
+    document.querySelector("#review-circle2 #line1").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle2 #line2").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle2 #line3").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle2 #line4").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle2 #line5").style.fill = "#8a2c2a";
+  } else {
+    document.querySelector("#review-circle2 #line1").style.fill = "#ffb800";
+    document.querySelector("#review-circle2 #line2").style.fill = "#ffb800";
+    document.querySelector("#review-circle2 #line3").style.fill = "#ffb800";
+    document.querySelector("#review-circle2 #line4").style.fill = "#ffb800";
+    document.querySelector("#review-circle2 #line5").style.fill = "#ffb800";
+  }
+
+  if (priceNumber > 3) {
+    document.querySelector("#review-circle3 #line1").style.fill = "#45db00";
+    document.querySelector("#review-circle3 #line2").style.fill = "#45db00";
+    document.querySelector("#review-circle3 #line3").style.fill = "#45db00";
+    document.querySelector("#review-circle3 #line4").style.fill = "#45db00";
+    document.querySelector("#review-circle3 #line5").style.fill = "#45db00";
+  } else if (priceNumber < 3) {
+    document.querySelector("#review-circle3 #line1").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle3 #line2").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle3 #line3").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle3 #line4").style.fill = "#8a2c2a";
+    document.querySelector("#review-circle3 #line5").style.fill = "#8a2c2a";
+  } else {
+    document.querySelector("#review-circle3 #line1").style.fill = "#ffb800";
+    document.querySelector("#review-circle3 #line2").style.fill = "#ffb800";
+    document.querySelector("#review-circle3 #line3").style.fill = "#ffb800";
+    document.querySelector("#review-circle3 #line4").style.fill = "#ffb800";
+    document.querySelector("#review-circle3 #line5").style.fill = "#ffb800";
+  }
 }
