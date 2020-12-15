@@ -956,6 +956,7 @@ iframe {
 #review-circle {
   width: 13rem;
   height: 20rem;
+  fill: #3e3e3d;
 }
 #review-button-container {
   width: 100%;
@@ -984,6 +985,7 @@ iframe {
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   margin: auto;
+  border-radius: 20px;
 }
 #textarea-container {
   display: none;
@@ -1015,4 +1017,41 @@ iframe {
   cursor: pointer;
   margin-right: 20rem;
 }
+
+#line1,
+#line2,
+#line3,
+#line4,
+#line5 {
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+#line1:hover {
+  fill: var(--umber);
+}
+
+#line2:hover,
+#line2:hover ~ #line1 {
+  fill: var(--selectiveyellow);
+}
+
+#line3:hover ~ #line1,
+#line3:hover ~ path,
+#line3:hover {
+  fill: var(--selectiveyellow);
+}
+
+#line4:hover ~ path,
+#line4:hover ~ #line1,
+#line4:hover {
+  fill: var(--harlequin);
+}
+
+#line5:hover ~ path,
+#line5:hover ~ #line1,
+#line5:hover {
+  fill: var(--harlequin);
+}
+
 /*************************************************** Cinema review *************************************************************/
