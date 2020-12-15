@@ -927,3 +927,92 @@ iframe {
 }
 
 /*************************************************** Cinema Overview *************************************************************/
+
+/*************************************************** Cinema review *************************************************************/
+#review-section {
+  position: fixed;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(88, 79, 79, 0.541);
+  z-index: 6;
+}
+#review-container {
+  position: fixed;
+  z-index: 3;
+  height: 90vh;
+  width: 70vw;
+  background-color: var(--codgray);
+  left: 15vw;
+  right: 15vw;
+  top: 6vh;
+  border-radius: 3%;
+  text-align: center;
+}
+#timeline-container {
+  width: 50rem;
+  margin-top: 7rem;
+}
+#review-circle {
+  width: 13rem;
+  height: 20rem;
+}
+#review-button-container {
+  width: 100%;
+  text-align: right;
+}
+
+#review-next-button {
+  height: 4rem;
+  width: 15rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+  border-radius: 3rem;
+  background-color: var(--gunpowder);
+  border: 0;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-right: 10rem;
+}
+
+#text-area-review {
+  outline: none;
+  resize: none;
+  height: 10rem;
+  width: 40rem;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+}
+#textarea-container {
+  display: none;
+  margin-bottom: 3rem;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+#review-circle2 {
+  display: none;
+  width: 13rem;
+  height: 20rem;
+}
+#review-circle3 {
+  display: none;
+  width: 13rem;
+  height: 20rem;
+}
+#review-back-button {
+  height: 4rem;
+  width: 15rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
+  border-radius: 3rem;
+  background-color: var(--gunpowder);
+  border: 0;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-right: 20rem;
+}
+/*************************************************** Cinema review *************************************************************/
