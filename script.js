@@ -273,9 +273,10 @@ function goBack() {
   }
 }
 
-document.querySelector("#create-review").addEventListener("click", starterReview);
+document.querySelector("#create-review button").addEventListener("click", starterReview);
 
 function starterReview() {
+  reviewBackButton.textContent = "Exit";
   document.querySelector("#review-section").style.display = "block";
   timeline1.style.fill = "#c41d1d";
   timeline2.style.fill = "white";
