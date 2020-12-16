@@ -1020,7 +1020,7 @@ iframe {
 }
 
 .hidden {
-  display: block;
+  display: none;
 }
 #review-back-button {
   height: 4rem;
