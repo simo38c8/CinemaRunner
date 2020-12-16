@@ -1,9 +1,9 @@
 let mobileMenubutton = document.querySelector("#mobile-menu-button");
 let mobileMenuClosebutton = document.querySelector("#close-menu-button");
 
-let comfortNumber = 1;
-let snackNumber = 1;
-let priceNumber = 1;
+let comfortNumber = "";
+let snackNumber = "";
+let priceNumber = "";
 
 mobileMenubutton.addEventListener("click", openMobileMenu);
 mobileMenuClosebutton.addEventListener("click", closeMobileMenu);
@@ -315,6 +315,45 @@ function starterReview() {
     document.querySelector("#lineThree").addEventListener("click", reviewThree);
     document.querySelector("#lineFour").addEventListener("click", reviewFour);
     document.querySelector("#lineFive").addEventListener("click", reviewFive);
+    document.querySelector(".review-number").textContent = comfortNumber;
+
+    document.querySelector("#lineOne").style.fill = "";
+    document.querySelector("#lineTwo").style.fill = "";
+    document.querySelector("#lineThree").style.fill = "";
+    document.querySelector("#lineFour").style.fill = "";
+    document.querySelector("#lineFive").style.fill = "";
+
+    if (comfortNumber == 1) {
+      document.querySelector("#lineOne").style.fill = "#8a2c2a";
+      document.querySelector("#lineTwo").style.fill = "";
+      document.querySelector("#lineThree").style.fill = "";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (comfortNumber == 2) {
+      document.querySelector("#lineOne").style.fill = "#8a2c2a";
+      document.querySelector("#lineTwo").style.fill = "#8a2c2a";
+      document.querySelector("#lineThree").style.fill = "";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (comfortNumber == 3) {
+      document.querySelector("#lineOne").style.fill = "#ffb800";
+      document.querySelector("#lineTwo").style.fill = "#ffb800";
+      document.querySelector("#lineThree").style.fill = "#ffb800";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (comfortNumber == 4) {
+      document.querySelector("#lineOne").style.fill = "#45db00";
+      document.querySelector("#lineTwo").style.fill = "#45db00";
+      document.querySelector("#lineThree").style.fill = "#45db00";
+      document.querySelector("#lineFour").style.fill = "#45db00";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (comfortNumber == 5) {
+      document.querySelector("#lineOne").style.fill = "#45db00";
+      document.querySelector("#lineTwo").style.fill = "#45db00";
+      document.querySelector("#lineThree").style.fill = "#45db00";
+      document.querySelector("#lineFour").style.fill = "#45db00";
+      document.querySelector("#lineFive").style.fill = "#45db00";
+    }
 
     function reviewOne() {
       let svgParent = event.target.parentElement.parentElement;
@@ -325,7 +364,6 @@ function starterReview() {
       svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
-      console.log(comfortNumber);
     }
     function reviewTwo() {
       let svgParent = event.target.parentElement.parentElement;
@@ -412,6 +450,45 @@ function nextReviewSubject2() {
     document.querySelector("#lineThree").addEventListener("click", reviewThree);
     document.querySelector("#lineFour").addEventListener("click", reviewFour);
     document.querySelector("#lineFive").addEventListener("click", reviewFive);
+    document.querySelector(".review-number").textContent = snackNumber;
+
+    document.querySelector("#lineOne").style.fill = "";
+    document.querySelector("#lineTwo").style.fill = "";
+    document.querySelector("#lineThree").style.fill = "";
+    document.querySelector("#lineFour").style.fill = "";
+    document.querySelector("#lineFive").style.fill = "";
+
+    if (snackNumber == 1) {
+      document.querySelector("#lineOne").style.fill = "#8a2c2a";
+      document.querySelector("#lineTwo").style.fill = "";
+      document.querySelector("#lineThree").style.fill = "";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (snackNumber == 2) {
+      document.querySelector("#lineOne").style.fill = "#8a2c2a";
+      document.querySelector("#lineTwo").style.fill = "#8a2c2a";
+      document.querySelector("#lineThree").style.fill = "";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (snackNumber == 3) {
+      document.querySelector("#lineOne").style.fill = "#ffb800";
+      document.querySelector("#lineTwo").style.fill = "#ffb800";
+      document.querySelector("#lineThree").style.fill = "#ffb800";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (snackNumber == 4) {
+      document.querySelector("#lineOne").style.fill = "#45db00";
+      document.querySelector("#lineTwo").style.fill = "#45db00";
+      document.querySelector("#lineThree").style.fill = "#45db00";
+      document.querySelector("#lineFour").style.fill = "#45db00";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (snackNumber == 5) {
+      document.querySelector("#lineOne").style.fill = "#45db00";
+      document.querySelector("#lineTwo").style.fill = "#45db00";
+      document.querySelector("#lineThree").style.fill = "#45db00";
+      document.querySelector("#lineFour").style.fill = "#45db00";
+      document.querySelector("#lineFive").style.fill = "#45db00";
+    }
 
     function reviewOne() {
       let svgParent = event.target.parentElement.parentElement;
@@ -506,6 +583,45 @@ function nextReviewSubject3() {
     document.querySelector("#lineThree").addEventListener("click", reviewThree);
     document.querySelector("#lineFour").addEventListener("click", reviewFour);
     document.querySelector("#lineFive").addEventListener("click", reviewFive);
+    document.querySelector(".review-number").textContent = priceNumber;
+
+    document.querySelector("#lineOne").style.fill = "";
+    document.querySelector("#lineTwo").style.fill = "";
+    document.querySelector("#lineThree").style.fill = "";
+    document.querySelector("#lineFour").style.fill = "";
+    document.querySelector("#lineFive").style.fill = "";
+
+    if (priceNumber == 1) {
+      document.querySelector("#lineOne").style.fill = "#8a2c2a";
+      document.querySelector("#lineTwo").style.fill = "";
+      document.querySelector("#lineThree").style.fill = "";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (priceNumber == 2) {
+      document.querySelector("#lineOne").style.fill = "#8a2c2a";
+      document.querySelector("#lineTwo").style.fill = "#8a2c2a";
+      document.querySelector("#lineThree").style.fill = "";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (priceNumber == 3) {
+      document.querySelector("#lineOne").style.fill = "#ffb800";
+      document.querySelector("#lineTwo").style.fill = "#ffb800";
+      document.querySelector("#lineThree").style.fill = "#ffb800";
+      document.querySelector("#lineFour").style.fill = "";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (priceNumber == 4) {
+      document.querySelector("#lineOne").style.fill = "#45db00";
+      document.querySelector("#lineTwo").style.fill = "#45db00";
+      document.querySelector("#lineThree").style.fill = "#45db00";
+      document.querySelector("#lineFour").style.fill = "#45db00";
+      document.querySelector("#lineFive").style.fill = "";
+    } else if (priceNumber == 5) {
+      document.querySelector("#lineOne").style.fill = "#45db00";
+      document.querySelector("#lineTwo").style.fill = "#45db00";
+      document.querySelector("#lineThree").style.fill = "#45db00";
+      document.querySelector("#lineFour").style.fill = "#45db00";
+      document.querySelector("#lineFive").style.fill = "#45db00";
+    }
 
     function reviewOne() {
       let svgParent = event.target.parentElement.parentElement;
