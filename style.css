@@ -31,11 +31,13 @@ body {
   background-color: var(--umber);
 }
 
-#logo-container {
-  margin-top: 1rem;
-  width: 3rem;
-  height: 3rem;
-  background-color: white;
+#logo {
+  width: 4rem;
+  height: 4rem;
+  margin-top: -1rem;
+  background-image: url(/assets/svg/logo.svg);
+  background-size: cover;
+  background-position: center;
 }
 
 #mobile-menu-button {
@@ -767,6 +769,12 @@ body {
   font-family: "Acme", sans-serif;
 }
 
+.timeline-number {
+  font-size: 4rem;
+  font-family: "Acme", sans-serif;
+  color: var(--codgray);
+}
+
 #reviews > div > div > div {
   position: relative;
 }
@@ -938,16 +946,20 @@ iframe {
   z-index: 6;
 }
 #review-container {
-  position: fixed;
   z-index: 3;
   height: 90vh;
-  width: 70vw;
   background-color: var(--codgray);
   left: 15vw;
   right: 15vw;
   top: 6vh;
   border-radius: 3%;
   text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1000px;
 }
 
 #review-button-container button {
@@ -969,11 +981,16 @@ iframe {
 }
 #review-button-container {
   width: 100%;
-  text-align: right;
 }
 
 #review-text1 {
   margin: 20px 0 20px;
+}
+
+#review-comment-text {
+  padding: 0rem 7rem;
+  position: absolute;
+  margin-top: -1.5rem;
 }
 
 #review-next-button {
