@@ -1,9 +1,9 @@
 let mobileMenubutton = document.querySelector("#mobile-menu-button");
 let mobileMenuClosebutton = document.querySelector("#close-menu-button");
 
-let comfortNumber = "";
-let snackNumber = "";
-let priceNumber = "";
+let comfortNumber = null;
+let snackNumber = null;
+let priceNumber = null;
 
 mobileMenubutton.addEventListener("click", openMobileMenu);
 mobileMenuClosebutton.addEventListener("click", closeMobileMenu);
@@ -309,14 +309,16 @@ function starterReview() {
   document.querySelector("#textarea-container").style.display = "none";
   document.querySelector("#review-circle2").style.display = "none";
   document.querySelector("#review-circle3").style.display = "none";
-  setTimeout(function () {
+
+  comfortNumberInteract();
+
+  function comfortNumberInteract() {
     document.querySelector("#lineOne").addEventListener("click", reviewOne);
     document.querySelector("#lineTwo").addEventListener("click", reviewTwo);
     document.querySelector("#lineThree").addEventListener("click", reviewThree);
     document.querySelector("#lineFour").addEventListener("click", reviewFour);
     document.querySelector("#lineFive").addEventListener("click", reviewFive);
     document.querySelector(".review-number").textContent = comfortNumber;
-
     document.querySelector("#lineOne").style.fill = "";
     document.querySelector("#lineTwo").style.fill = "";
     document.querySelector("#lineThree").style.fill = "";
@@ -357,55 +359,35 @@ function starterReview() {
 
     function reviewOne() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineTwo").style.fill = "";
-      svgParent.querySelector("#lineThree").style.fill = "";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      comfortNumberInteract();
     }
     function reviewTwo() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineTwo").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineThree").style.fill = "";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      comfortNumberInteract();
     }
     function reviewThree() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#ffb800";
-      svgParent.querySelector("#lineTwo").style.fill = "#ffb800";
-      svgParent.querySelector("#lineThree").style.fill = "#ffb800";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      comfortNumberInteract();
     }
     function reviewFour() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#45db00";
-      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
-      svgParent.querySelector("#lineThree").style.fill = "#45db00";
-      svgParent.querySelector("#lineFour").style.fill = "#45db00";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      comfortNumberInteract();
     }
     function reviewFive() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#45db00";
-      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
-      svgParent.querySelector("#lineThree").style.fill = "#45db00";
-      svgParent.querySelector("#lineFour").style.fill = "#45db00";
-      svgParent.querySelector("#lineFive").style.fill = "#45db00";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      comfortNumberInteract();
     }
-  }, 100);
+  }
 }
 
 function nextReviewSubject2() {
@@ -444,7 +426,10 @@ function nextReviewSubject2() {
   document.querySelector("#review-circle2").style.display = "none";
   document.querySelector("#review-circle3").style.display = "none";
   document.querySelector("#svg-container").style.display = "block";
-  setTimeout(function () {
+
+  snackNumberInteract();
+
+  function snackNumberInteract() {
     document.querySelector("#lineOne").addEventListener("click", reviewOne);
     document.querySelector("#lineTwo").addEventListener("click", reviewTwo);
     document.querySelector("#lineThree").addEventListener("click", reviewThree);
@@ -492,55 +477,36 @@ function nextReviewSubject2() {
 
     function reviewOne() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineTwo").style.fill = "";
-      svgParent.querySelector("#lineThree").style.fill = "";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
+
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      snackNumberInteract();
     }
     function reviewTwo() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineTwo").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineThree").style.fill = "";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      snackNumberInteract();
     }
     function reviewThree() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#ffb800";
-      svgParent.querySelector("#lineTwo").style.fill = "#ffb800";
-      svgParent.querySelector("#lineThree").style.fill = "#ffb800";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      snackNumberInteract();
     }
     function reviewFour() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#45db00";
-      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
-      svgParent.querySelector("#lineThree").style.fill = "#45db00";
-      svgParent.querySelector("#lineFour").style.fill = "#45db00";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      snackNumberInteract();
     }
     function reviewFive() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#45db00";
-      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
-      svgParent.querySelector("#lineThree").style.fill = "#45db00";
-      svgParent.querySelector("#lineFour").style.fill = "#45db00";
-      svgParent.querySelector("#lineFive").style.fill = "#45db00";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      snackNumberInteract();
     }
-  }, 100);
+  }
 }
 
 function nextReviewSubject3() {
@@ -577,7 +543,10 @@ function nextReviewSubject3() {
   document.querySelector("#svg-container").style.display = "block";
   reviewNextButton.style.backgroundColor = "#46495b";
   reviewNextButton.textContent = "Next";
-  setTimeout(function () {
+
+  priceNumberInteract();
+
+  function priceNumberInteract() {
     document.querySelector("#lineOne").addEventListener("click", reviewOne);
     document.querySelector("#lineTwo").addEventListener("click", reviewTwo);
     document.querySelector("#lineThree").addEventListener("click", reviewThree);
@@ -625,55 +594,35 @@ function nextReviewSubject3() {
 
     function reviewOne() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineTwo").style.fill = "";
-      svgParent.querySelector("#lineThree").style.fill = "";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      priceNumberInteract();
     }
     function reviewTwo() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineTwo").style.fill = "#8a2c2a";
-      svgParent.querySelector("#lineThree").style.fill = "";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      priceNumberInteract();
     }
     function reviewThree() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#ffb800";
-      svgParent.querySelector("#lineTwo").style.fill = "#ffb800";
-      svgParent.querySelector("#lineThree").style.fill = "#ffb800";
-      svgParent.querySelector("#lineFour").style.fill = "";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      priceNumberInteract();
     }
     function reviewFour() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#45db00";
-      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
-      svgParent.querySelector("#lineThree").style.fill = "#45db00";
-      svgParent.querySelector("#lineFour").style.fill = "#45db00";
-      svgParent.querySelector("#lineFive").style.fill = "";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
       pricetNumber = svgParent.querySelector(".review-number").textContent;
+      priceNumberInteract();
     }
     function reviewFive() {
       let svgParent = event.target.parentElement.parentElement;
-      svgParent.querySelector("#lineOne").style.fill = "#45db00";
-      svgParent.querySelector("#lineTwo").style.fill = "#45db00";
-      svgParent.querySelector("#lineThree").style.fill = "#45db00";
-      svgParent.querySelector("#lineFour").style.fill = "#45db00";
-      svgParent.querySelector("#lineFive").style.fill = "#45db00";
       svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      priceNumberInteract();
     }
-  }, 100);
+  }
 }
 
 function nextReviewSubject4() {
