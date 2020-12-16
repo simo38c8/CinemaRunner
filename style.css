@@ -989,9 +989,20 @@ iframe {
 }
 
 #review-comment-text {
-  padding: 0rem 7rem;
+  padding: 2rem 7rem;
   position: absolute;
   margin-top: -1.5rem;
+  font-size: 1.5rem;
+  height: 5rem;
+  text-align: center;
+
+  border-radius: 4rem;
+}
+
+#reviewContainer {
+  width: 100%;
+  height: 3rem;
+  margin: auto;
 }
 
 #review-next-button {
@@ -1091,6 +1102,14 @@ iframe {
 
 .node {
   pointer-events: none;
+}
+
+#helping-text {
+  position: absolute;
+  top: 25rem;
+  left: 12rem;
+  font-size: 2rem;
+  font-family: "Acme", sans-serif;
 }
 
 /*************************************************** Cinema review *************************************************************/

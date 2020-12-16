@@ -22,21 +22,29 @@ function closeMobileMenu() {
       return response.json();
     })
     .then((data) => {
-      document.querySelector("#sort-by-overall-container").addEventListener("click", () => {
-        sortByOverallRating(data);
-      });
+      document
+        .querySelector("#sort-by-overall-container")
+        .addEventListener("click", () => {
+          sortByOverallRating(data);
+        });
 
-      document.querySelector("#sort-by-comfort-container").addEventListener("click", () => {
-        sortByOComfortRating(data);
-      });
+      document
+        .querySelector("#sort-by-comfort-container")
+        .addEventListener("click", () => {
+          sortByOComfortRating(data);
+        });
 
-      document.querySelector("#sort-by-snacks-container").addEventListener("click", () => {
-        sortBySnackRating(data);
-      });
+      document
+        .querySelector("#sort-by-snacks-container")
+        .addEventListener("click", () => {
+          sortBySnackRating(data);
+        });
 
-      document.querySelector("#sort-by-price-container").addEventListener("click", () => {
-        sortByPriceRating(data);
-      });
+      document
+        .querySelector("#sort-by-price-container")
+        .addEventListener("click", () => {
+          sortByPriceRating(data);
+        });
 
       function sortByPriceRating(data) {
         data.sort((a, b) => {
@@ -226,7 +234,9 @@ function closeMobileMenu() {
 </div>
 </div>`;
 
-          document.querySelector("#list-container").insertAdjacentHTML("afterbegin", content);
+          document
+            .querySelector("#list-container")
+            .insertAdjacentHTML("afterbegin", content);
         }
       }
     });
@@ -242,6 +252,12 @@ let reviewText2 = document.querySelector("#review-text2");
 let reviewCircle = document.querySelector("#review-circle");
 let reviewNextButton = document.querySelector("#review-next-button");
 let reviewBackButton = document.querySelector("#review-back-button");
+
+// reviewNextButton.disabled = true;
+// reviewNextButton.style.opacity = "0.6";
+let firstTime = "a";
+let firstTime2 = "a";
+let firstTimee = "a";
 
 reviewBackButton.addEventListener("click", goBack);
 reviewNextButton.addEventListener("click", goForward);
@@ -264,18 +280,36 @@ function goBack() {
     document.querySelector("#review-section").style.display = "none";
   } else if (reviewText1.textContent == "Snacks") {
     starterReview();
+    reviewNextButton.disabled = false;
+    reviewNextButton.style.opacity = "1";
   } else if (reviewText1.textContent == "Price") {
     nextReviewSubject2();
+    reviewNextButton.disabled = false;
+    reviewNextButton.style.opacity = "1";
   } else if (reviewText1.textContent == "Comment") {
     nextReviewSubject3();
+    reviewNextButton.disabled = false;
+    reviewNextButton.style.opacity = "1";
   } else if (reviewText1.textContent == "Overview") {
     nextReviewSubject4();
+    reviewNextButton.disabled = false;
+    reviewNextButton.style.opacity = "1";
   }
 }
 
-document.querySelector("#create-review button").addEventListener("click", starterReview);
+document
+  .querySelector("#create-review button")
+  .addEventListener("click", starterReview);
 
 function starterReview() {
+  if (firstTimee == "a") {
+    reviewNextButton.disabled = true;
+    reviewNextButton.style.opacity = "0.6";
+    firstTimee = "b";
+  } else if (firstTimee == "b") {
+    reviewNextButton.disabled = false;
+    reviewNextButton.style.opacity = "1";
+  }
   reviewBackButton.textContent = "Exit";
   document.querySelector("#review-section").style.display = "block";
   timeline1.style.fill = "#c41d1d";
@@ -289,7 +323,8 @@ function starterReview() {
   document.querySelector(".timeline-four").style.color = "#171717";
   document.querySelector(".timeline-five").style.color = "#171717";
   reviewText1.textContent = "Comfort";
-  reviewText2.textContent = "How comfortable did you find the seats in the cinema?";
+  reviewText2.textContent =
+    "How comfortable did you find the seats in the cinema?";
   reviewCircle.innerHTML = `
     <title>circle_comfort</title>
   <g>
@@ -368,8 +403,14 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">1</p>`;
+
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      document.querySelector("#helping-text").classList.add("hidden");
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewTwo() {
       let svgParent = event.target.parentElement.parentElement;
@@ -378,8 +419,13 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">2</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      document.querySelector("#helping-text").classList.add("hidden");
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewThree() {
       let svgParent = event.target.parentElement.parentElement;
@@ -388,8 +434,13 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">3</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      document.querySelector("#helping-text").classList.add("hidden");
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewFour() {
       let svgParent = event.target.parentElement.parentElement;
@@ -398,8 +449,13 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">4</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      document.querySelector("#helping-text").classList.add("hidden");
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewFive() {
       let svgParent = event.target.parentElement.parentElement;
@@ -408,13 +464,27 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">5</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
+      document.querySelector("#helping-text").classList.add("hidden");
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
   }, 1);
 }
 
 function nextReviewSubject2() {
+  if (firstTime == "a") {
+    reviewNextButton.disabled = true;
+    reviewNextButton.style.opacity = "0.6";
+    firstTime = "b";
+  } else if (firstTime == "b") {
+    reviewNextButton.disabled = false;
+    reviewNextButton.style.opacity = "1";
+  }
+
   reviewBackButton.textContent = "Back";
   timeline1.style.fill = "#c41d1d";
   timeline2.style.fill = "#c41d1d";
@@ -508,8 +578,12 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">1</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewTwo() {
       let svgParent = event.target.parentElement.parentElement;
@@ -518,8 +592,12 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">2</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewThree() {
       let svgParent = event.target.parentElement.parentElement;
@@ -528,8 +606,12 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">3</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewFour() {
       let svgParent = event.target.parentElement.parentElement;
@@ -538,8 +620,12 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">4</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewFive() {
       let svgParent = event.target.parentElement.parentElement;
@@ -548,13 +634,25 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">5</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
   }, 1);
 }
 
 function nextReviewSubject3() {
+  if (firstTime2 == "a") {
+    reviewNextButton.disabled = true;
+    reviewNextButton.style.opacity = "0.6";
+    firstTime2 = "b";
+  } else if (firstTime2 == "b") {
+    reviewNextButton.disabled = false;
+    reviewNextButton.style.opacity = "1";
+  }
   timeline1.style.fill = "#c41d1d";
   timeline2.style.fill = "#c41d1d";
   timeline3.style.fill = "#c41d1d";
@@ -566,7 +664,8 @@ function nextReviewSubject3() {
   document.querySelector(".timeline-four").style.color = "#171717";
   document.querySelector(".timeline-five").style.color = "#171717";
   reviewText1.textContent = "Price";
-  reviewText2.textContent = "how was the price range of the tickets and snacks?";
+  reviewText2.textContent =
+    "how was the price range of the tickets and snacks?";
   reviewCircle.innerHTML = `
   <title>circle_price</title>
   <g>
@@ -646,8 +745,12 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">1</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewTwo() {
       let svgParent = event.target.parentElement.parentElement;
@@ -656,8 +759,12 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">2</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewThree() {
       let svgParent = event.target.parentElement.parentElement;
@@ -666,8 +773,12 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">3</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewFour() {
       let svgParent = event.target.parentElement.parentElement;
@@ -676,8 +787,12 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
-      pricetNumber = svgParent.querySelector(".review-number").textContent;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">4</p>`;
+      priceNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
     function reviewFive() {
       let svgParent = event.target.parentElement.parentElement;
@@ -686,13 +801,18 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">5</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
+      reviewNextButton.disabled = false;
+      reviewNextButton.style.opacity = "1";
     }
   }, 1);
 }
 
 function nextReviewSubject4() {
+  reviewNextButton.textContent = "Next";
   timeline1.style.fill = "#c41d1d";
   timeline2.style.fill = "#c41d1d";
   timeline3.style.fill = "#c41d1d";
@@ -716,6 +836,7 @@ function nextReviewSubject4() {
   document.querySelector("#review-comment-text").classList.add("hidden");
 }
 function nextReviewSubject5() {
+  reviewNextButton.textContent = "Submit";
   timeline1.style.fill = "#c41d1d";
   timeline2.style.fill = "#c41d1d";
   timeline3.style.fill = "#c41d1d";
@@ -727,6 +848,9 @@ function nextReviewSubject5() {
   document.querySelector(".timeline-four").style.color = "white";
   document.querySelector(".timeline-five").style.color = "white";
   document.querySelector("#review-comment-text").classList.remove("hidden");
+  document.querySelector(
+    "#review-comment-text"
+  ).textContent = document.querySelector("#text-area-review").value;
 
   reviewText1.textContent = "Overview";
   reviewText2.textContent = "";
@@ -795,7 +919,8 @@ function nextReviewSubject5() {
   </g>`;
 
   document.querySelector("#svg-container").style.display = "grid";
-  document.querySelector("#svg-container").style.gridTemplateColumns = "15rem 15rem 15rem";
+  document.querySelector("#svg-container").style.gridTemplateColumns =
+    "15rem 15rem 15rem";
   document.querySelector("#svg-container").style.justifyContent = "center";
 
   document.querySelector("#review-circle #line1").style.fill = "";
