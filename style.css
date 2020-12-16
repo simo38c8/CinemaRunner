@@ -960,6 +960,7 @@ iframe {
   transform: translateX(-50%);
   width: 80%;
   max-width: 1000px;
+  max-height: 750px;
 }
 
 #review-button-container button {
