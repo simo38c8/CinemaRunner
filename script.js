@@ -571,7 +571,7 @@ function nextReviewSubject3() {
       <path d="M299,187.3h0a10.18,10.18,0,0,0-8.7,10.23c1.33,32.59-10.88,64.89-34.19,89.77a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.6l-.3.17L234,328.33l.3-.17c1.08-.61,2.16-1.22,3.24-1.87a153.16,153.16,0,0,0,32.75-26.45c27-28.8,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,187.3Z" />
     </g>
   </g>`;
-  reviewCircle.style.height = "20rem";
+  reviewCircle.style.height = "16rem";
   document.querySelector("#textarea-container").style.display = "none";
   document.querySelector("#review-circle2").style.display = "none";
   document.querySelector("#review-circle3").style.display = "none";

@@ -949,18 +949,31 @@ iframe {
   border-radius: 3%;
   text-align: center;
 }
+
+#review-button-container button {
+  margin: 0rem 5rem;
+}
+
+#review-button-container {
+  padding: 1rem 2rem;
+}
 #timeline-container {
   width: 50rem;
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 #review-circle {
-  width: 13rem;
-  height: 20rem;
+  width: 14rem;
+  height: 15rem;
   fill: #3e3e3d;
+  margin-top: 1rem;
 }
 #review-button-container {
   width: 100%;
   text-align: right;
+}
+
+#review-text1 {
+  margin: 20px 0 20px;
 }
 
 #review-next-button {
@@ -1020,7 +1033,6 @@ iframe {
   color: white;
   margin-bottom: 1rem;
   cursor: pointer;
-  margin-right: 20rem;
 }
 
 #lineOne,
