@@ -22,21 +22,29 @@ function closeMobileMenu() {
       return response.json();
     })
     .then((data) => {
-      document.querySelector("#sort-by-overall-container").addEventListener("click", () => {
-        sortByOverallRating(data);
-      });
+      document
+        .querySelector("#sort-by-overall-container")
+        .addEventListener("click", () => {
+          sortByOverallRating(data);
+        });
 
-      document.querySelector("#sort-by-comfort-container").addEventListener("click", () => {
-        sortByOComfortRating(data);
-      });
+      document
+        .querySelector("#sort-by-comfort-container")
+        .addEventListener("click", () => {
+          sortByOComfortRating(data);
+        });
 
-      document.querySelector("#sort-by-snacks-container").addEventListener("click", () => {
-        sortBySnackRating(data);
-      });
+      document
+        .querySelector("#sort-by-snacks-container")
+        .addEventListener("click", () => {
+          sortBySnackRating(data);
+        });
 
-      document.querySelector("#sort-by-price-container").addEventListener("click", () => {
-        sortByPriceRating(data);
-      });
+      document
+        .querySelector("#sort-by-price-container")
+        .addEventListener("click", () => {
+          sortByPriceRating(data);
+        });
 
       function sortByPriceRating(data) {
         data.sort((a, b) => {
@@ -226,7 +234,9 @@ function closeMobileMenu() {
 </div>
 </div>`;
 
-          document.querySelector("#list-container").insertAdjacentHTML("afterbegin", content);
+          document
+            .querySelector("#list-container")
+            .insertAdjacentHTML("afterbegin", content);
         }
       }
     });
@@ -242,6 +252,15 @@ let reviewText2 = document.querySelector("#review-text2");
 let reviewCircle = document.querySelector("#review-circle");
 let reviewNextButton = document.querySelector("#review-next-button");
 let reviewBackButton = document.querySelector("#review-back-button");
+
+document.querySelector("#close-review").addEventListener("click", () => {
+  document.querySelector("#review-section").style.display = "none";
+  reviewBackButton.textContent = "Exit";
+  reviewNextButton.textContent = "Next";
+  document.querySelector("#textarea-container").style.display = "none";
+  reviewCircle.style.height = "16rem";
+  document.querySelector("#svg-container").style.display = "block";
+});
 
 // reviewNextButton.disabled = true;
 // reviewNextButton.style.opacity = "0.6";
@@ -284,7 +303,9 @@ function goBack() {
   }
 }
 
-document.querySelector("#create-review button").addEventListener("click", starterReview);
+document
+  .querySelector("#create-review button")
+  .addEventListener("click", starterReview);
 
 function starterReview() {
   if (comfortNumber == null) {
@@ -307,7 +328,8 @@ function starterReview() {
   document.querySelector(".timeline-four").style.color = "#171717";
   document.querySelector(".timeline-five").style.color = "#171717";
   reviewText1.textContent = "Comfort";
-  reviewText2.textContent = "How comfortable did you find the seats in the cinema?";
+  reviewText2.textContent =
+    "How comfortable did you find the seats in the cinema?";
   reviewCircle.innerHTML = `
     <title>circle_comfort</title>
   <g>
@@ -386,7 +408,9 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">1</p>`;
 
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
@@ -400,7 +424,9 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">2</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -413,7 +439,9 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">3</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -426,7 +454,9 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">4</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -439,7 +469,9 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">5</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -550,7 +582,9 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">1</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -562,7 +596,9 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">2</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -574,7 +610,9 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">3</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -586,7 +624,9 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">4</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -598,7 +638,9 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">5</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -625,7 +667,8 @@ function nextReviewSubject3() {
   document.querySelector(".timeline-four").style.color = "#171717";
   document.querySelector(".timeline-five").style.color = "#171717";
   reviewText1.textContent = "Price";
-  reviewText2.textContent = "how was the price range of the tickets and snacks?";
+  reviewText2.textContent =
+    "how was the price range of the tickets and snacks?";
   reviewCircle.innerHTML = `
   <title>circle_price</title>
   <g>
@@ -705,7 +748,9 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">1</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -717,7 +762,9 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">2</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -729,7 +776,9 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">3</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -741,7 +790,9 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">4</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -753,7 +804,9 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(
+        ".node"
+      ).innerHTML = `<p class="review-number">5</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -798,7 +851,9 @@ function nextReviewSubject5() {
   document.querySelector(".timeline-four").style.color = "white";
   document.querySelector(".timeline-five").style.color = "white";
   document.querySelector("#review-comment-text").classList.remove("hidden");
-  document.querySelector("#review-comment-text").textContent = document.querySelector("#text-area-review").value;
+  document.querySelector(
+    "#review-comment-text"
+  ).textContent = document.querySelector("#text-area-review").value;
 
   reviewText1.textContent = "Overview";
   reviewText2.textContent = "";
@@ -806,6 +861,19 @@ function nextReviewSubject5() {
   document.querySelector("#review-circle3").style.display = "block";
   document.querySelector("#review-circle3").style.paddingBottom = "1rem";
   document.querySelector("#textarea-container").style.display = "none";
+  function myFunction(x) {
+    if (x.matches) {
+      // If media query matches
+      reviewCircle.style.height = "10rem";
+      reviewCircle.style.width = "9rem";
+    } else {
+    }
+  }
+
+  var x = window.matchMedia("(max-width: 900px)");
+  myFunction(x); // Call listener function at run time
+  x.addListener(myFunction); // Attach listener function on state changes
+
   reviewCircle.style.height = "16rem";
   reviewCircle.style.width = "13rem";
   reviewCircle.innerHTML = `
@@ -867,7 +935,6 @@ function nextReviewSubject5() {
   </g>`;
 
   document.querySelector("#svg-container").style.display = "grid";
-  document.querySelector("#svg-container").style.gridTemplateColumns = "15rem 15rem 15rem";
   document.querySelector("#svg-container").style.justifyContent = "center";
 
   document.querySelector("#review-circle #line1").style.fill = "";
