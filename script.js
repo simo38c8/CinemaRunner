@@ -253,14 +253,26 @@ let reviewCircle = document.querySelector("#review-circle");
 let reviewNextButton = document.querySelector("#review-next-button");
 let reviewBackButton = document.querySelector("#review-back-button");
 
-document.querySelector("#close-review").addEventListener("click", () => {
+document.querySelector("#close-review").addEventListener("click", closingDone);
+
+function closingDone() {
   document.querySelector("#review-section").style.display = "none";
   reviewBackButton.textContent = "Exit";
   reviewNextButton.textContent = "Next";
   document.querySelector("#textarea-container").style.display = "none";
   reviewCircle.style.height = "16rem";
   document.querySelector("#svg-container").style.display = "block";
-});
+}
+function closingDone2() {
+  document.querySelector("#review-section").style.display = "none";
+  reviewBackButton.textContent = "Exit";
+  reviewNextButton.textContent = "Next";
+  document.querySelector("#textarea-container").style.display = "none";
+  reviewCircle.style.height = "16rem";
+  document.querySelector("#svg-container").style.display = "block";
+  document.querySelector("#create-review button").disabled = "true";
+  document.querySelector("#create-review button").opacity = "0.6";
+}
 
 // reviewNextButton.disabled = true;
 // reviewNextButton.style.opacity = "0.6";
@@ -840,6 +852,7 @@ function nextReviewSubject4() {
 }
 function nextReviewSubject5() {
   reviewNextButton.textContent = "Submit";
+  reviewNextButton.addEventListener("click", closingDone2);
   timeline1.style.fill = "#c41d1d";
   timeline2.style.fill = "#c41d1d";
   timeline3.style.fill = "#c41d1d";
