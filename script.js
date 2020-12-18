@@ -22,29 +22,21 @@ function closeMobileMenu() {
       return response.json();
     })
     .then((data) => {
-      document
-        .querySelector("#sort-by-overall-container")
-        .addEventListener("click", () => {
-          sortByOverallRating(data);
-        });
+      document.querySelector("#sort-by-overall-container").addEventListener("click", () => {
+        sortByOverallRating(data);
+      });
 
-      document
-        .querySelector("#sort-by-comfort-container")
-        .addEventListener("click", () => {
-          sortByOComfortRating(data);
-        });
+      document.querySelector("#sort-by-comfort-container").addEventListener("click", () => {
+        sortByOComfortRating(data);
+      });
 
-      document
-        .querySelector("#sort-by-snacks-container")
-        .addEventListener("click", () => {
-          sortBySnackRating(data);
-        });
+      document.querySelector("#sort-by-snacks-container").addEventListener("click", () => {
+        sortBySnackRating(data);
+      });
 
-      document
-        .querySelector("#sort-by-price-container")
-        .addEventListener("click", () => {
-          sortByPriceRating(data);
-        });
+      document.querySelector("#sort-by-price-container").addEventListener("click", () => {
+        sortByPriceRating(data);
+      });
 
       function sortByPriceRating(data) {
         data.sort((a, b) => {
@@ -234,9 +226,7 @@ function closeMobileMenu() {
 </div>
 </div>`;
 
-          document
-            .querySelector("#list-container")
-            .insertAdjacentHTML("afterbegin", content);
+          document.querySelector("#list-container").insertAdjacentHTML("afterbegin", content);
         }
       }
     });
@@ -315,9 +305,7 @@ function goBack() {
   }
 }
 
-document
-  .querySelector("#create-review button")
-  .addEventListener("click", starterReview);
+document.querySelector("#create-review button").addEventListener("click", starterReview);
 
 function starterReview() {
   if (comfortNumber == null) {
@@ -340,8 +328,7 @@ function starterReview() {
   document.querySelector(".timeline-four").style.color = "#171717";
   document.querySelector(".timeline-five").style.color = "#171717";
   reviewText1.textContent = "Comfort";
-  reviewText2.textContent =
-    "How comfortable did you find the seats in the cinema?";
+  reviewText2.textContent = "How comfortable did you find the seats in the cinema?";
   reviewCircle.innerHTML = `
     <title>circle_comfort</title>
   <g>
@@ -420,9 +407,7 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
 
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
@@ -436,9 +421,7 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -451,9 +434,7 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -466,9 +447,7 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -481,9 +460,7 @@ function starterReview() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
       comfortNumber = svgParent.querySelector(".review-number").textContent;
       document.querySelector("#helping-text").classList.add("hidden");
       reviewNextButton.disabled = false;
@@ -594,9 +571,7 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -608,9 +583,7 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -622,9 +595,7 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -636,9 +607,7 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -650,9 +619,7 @@ function nextReviewSubject2() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
       snackNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -679,8 +646,7 @@ function nextReviewSubject3() {
   document.querySelector(".timeline-four").style.color = "#171717";
   document.querySelector(".timeline-five").style.color = "#171717";
   reviewText1.textContent = "Price";
-  reviewText2.textContent =
-    "how was the price range of the tickets and snacks?";
+  reviewText2.textContent = "how was the price range of the tickets and snacks?";
   reviewCircle.innerHTML = `
   <title>circle_price</title>
   <g>
@@ -760,9 +726,7 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">1</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">1</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -774,9 +738,7 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">2</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">2</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -788,9 +750,7 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#ffb800";
       svgParent.querySelector("#lineFour").style.fill = "";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">3</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">3</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -802,9 +762,7 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">4</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">4</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -816,9 +774,7 @@ function nextReviewSubject3() {
       svgParent.querySelector("#lineThree").style.fill = "#45db00";
       svgParent.querySelector("#lineFour").style.fill = "#45db00";
       svgParent.querySelector("#lineFive").style.fill = "#45db00";
-      svgParent.querySelector(
-        ".node"
-      ).innerHTML = `<p class="review-number">5</p>`;
+      svgParent.querySelector(".node").innerHTML = `<p class="review-number">5</p>`;
       priceNumber = svgParent.querySelector(".review-number").textContent;
       reviewNextButton.disabled = false;
       reviewNextButton.style.opacity = "1";
@@ -864,48 +820,48 @@ function nextReviewSubject5() {
   document.querySelector(".timeline-four").style.color = "white";
   document.querySelector(".timeline-five").style.color = "white";
   document.querySelector("#review-comment-text").classList.remove("hidden");
-  document.querySelector(
-    "#review-comment-text"
-  ).textContent = document.querySelector("#text-area-review").value;
+  document.querySelector("#review-comment-text").textContent = document.querySelector("#text-area-review").value;
 
   reviewText1.textContent = "Overview";
   reviewText2.textContent = "";
   document.querySelector("#review-circle2").style.display = "block";
   document.querySelector("#review-circle3").style.display = "block";
-  document.querySelector("#review-circle3").style.paddingBottom = "1rem";
+
   document.querySelector("#textarea-container").style.display = "none";
-  function myFunction(x) {
-    if (x.matches) {
-      // If media query matches
-      reviewCircle.style.height = "10rem";
-      reviewCircle.style.width = "9rem";
-    } else {
-    }
+
+  let mq = window.matchMedia("(max-width: 900px)");
+  if (mq.matches) {
+    reviewCircle.style.height = "20rem";
+    reviewCircle.style.width = "6rem";
+    document.querySelector("#review-circle2").style.width = "6rem";
+    document.querySelector("#review-circle3").style.width = "6rem";
+    document.querySelector("#review-circle3").style.paddingBottom = "0.5rem";
+  } else {
+    reviewCircle.style.height = "16rem";
+    reviewCircle.style.width = "13rem";
+    document.querySelector("#review-circle3").style.paddingBottom = "1rem";
   }
-
-  var x = window.matchMedia("(max-width: 900px)");
-  myFunction(x); // Call listener function at run time
-  x.addListener(myFunction); // Attach listener function on state changes
-
-  reviewCircle.style.height = "16rem";
-  reviewCircle.style.width = "13rem";
   reviewCircle.innerHTML = `
-  <title>circle_price</title>
+  <title>circle_comfort</title>
   <g>
-    <path d="M290.74,177.61,265.43,189.1c-2.27-4.34-4.54-8.67-6.7-12.75-42.23,3.08-57.43-2.83-64.26-25.95l23-10.45c9.69,4.54,17.91,8.55,26.4,12.45.67-1.2,1.46-2.16,2.14-3.36l-16.15-35.57c-24,4.33-47.78,7.68-60.22-19.74-12.56-27.66,0-47.67,22.58-63.87-2.78-6.78-5.1-12.58-7.43-18.38L210.13,0l8.07,17.79c39.54-1,54.56,5.92,59.15,26.77L254.07,55.13c-7.36-4.11-13.51-7.57-19.55-10.79-.79.95-1.71,2.27-2.5,3.22,2.24,4.94,4.88,9.41,6.61,14.58,3.84,13.15,10.55,17.85,25.81,14.5,22.63-4.61,36.13,3,44.74,19.91,9.39,18.68,6.64,37.5-7.82,52.7-4.95,5.23-10.49,9.83-15.55,14.81C287.54,169.23,289.08,173.3,290.74,177.61Zm-17-39.37c10.13-7.28,13.59-15.11,8.83-24.27-4.66-8.91-13.06-9.26-22.28-5.38ZM216.32,83.58,203.66,55.67c-8.47,6.22-12.5,12.82-8,22.09C200.08,86.78,207.22,87.72,216.32,83.58Z" style="fill: #fff"/>
-    <path id="line2" d="M156.64,352a145.2,145.2,0,0,1-55-10.66,10,10,0,0,1-5.27-13.72h0a10,10,0,0,1,12.67-4.86,127.19,127.19,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.44,146,146,0,0,1-48,8" />
-    <path id="line3" d="M75.32,328.83A146.18,146.18,0,0,1,10,247.38a10,10,0,0,1,7.16-12.82h0a10,10,0,0,1,11.86,6.63,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,328.83Z" />
-    <path id="line5" d="M44.8,97.08h0a10,10,0,0,1-1.37-14.54,145.42,145.42,0,0,1,98.42-48.39,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.67,125.67,0,0,0,58.31,95.9,10,10,0,0,1,44.8,97.08Z" />
-    <path id="line4" d="M14.2,221.56a10,10,0,0,1-12.21-8A147.56,147.56,0,0,1,0,189.4a145.05,145.05,0,0,1,24.35-80.95,10,10,0,0,1,14.45-2.36h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,189.4a127.25,127.25,0,0,0,1.73,20.91,10,10,0,0,1-7.53,11.25Z"/>
-    <foreignobject class="node" x="106" y="42" width="300" height="300">
+  <path id="line5" d="M44.8,74.2h0a10,10,0,0,1-1.37-14.53,145.43,145.43,0,0,1,98.42-48.4,10,10,0,0,1,10.8,10h0a10,10,0,0,1-9.21,10A125.62,125.62,0,0,0,58.31,73,10,10,0,0,1,44.8,74.2Z" />
+
+  <path id="line4" d="M14.2,198.68A10,10,0,0,1,2,190.63a147.47,147.47,0,0,1-2-24.12A145.05,145.05,0,0,1,24.35,85.56,10,10,0,0,1,38.8,83.2h0a10,10,0,0,1,2.26,13.36A125.25,125.25,0,0,0,20,166.51a127.37,127.37,0,0,0,1.73,20.92,10,10,0,0,1-7.53,11.25Z" "/>
+  <path id="line3" d="M75.32,305.94A146.18,146.18,0,0,1,10,224.49a10,10,0,0,1,7.16-12.81h0a10,10,0,0,1,11.86,6.62,126.2,126.2,0,0,0,56.47,70.44,10,10,0,0,1,3.87,13h0A10,10,0,0,1,75.32,305.94Z" />
+  <path id="line2" d="M156.64,329.15a145.39,145.39,0,0,1-55-10.66,10,10,0,0,1-5.27-13.73h0a10,10,0,0,1,12.67-4.86,127,127,0,0,0,89.12,2.27,10,10,0,0,1,12.4,5.5h0a10,10,0,0,1-6,13.43,145.73,145.73,0,0,1-48,8" /> 
+  
+  <foreignobject class="node" x="106" y="42" width="300" height="300">
                 
     <p class="review-number">${comfortNumber}</p>               
 </foreignobject>
-    <g id="line1">
-      <path d="M217.58,326.57h0a10,10,0,0,1,4.53-12.8A126.56,126.56,0,0,0,290.28,201.4c0-1.08,0-2.14-.06-3.21v-.35l20-.56v.35c0,1.25.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,326.57Z" />
-      <path d="M299,187.3h0a10.18,10.18,0,0,0-8.7,10.23c1.33,32.59-10.88,64.89-34.19,89.77a132.56,132.56,0,0,1-28.3,22.85c-.91.55-1.83,1.07-2.76,1.6l-.3.17L234,328.33l.3-.17c1.08-.61,2.16-1.22,3.24-1.87a153.16,153.16,0,0,0,32.75-26.45c27-28.8,41.11-66.16,39.6-103.88A9.24,9.24,0,0,0,299,187.3Z" />
-    </g>
+  <g id="line1">
+  <path d="M217.58,303.68h0a10,10,0,0,1,4.53-12.8,126.56,126.56,0,0,0,68.17-112.36c0-1.08,0-2.14-.06-3.21V175l20-.55v.34c0,1.26.07,2.51.07,3.77a146.52,146.52,0,0,1-78.86,130.06A10,10,0,0,1,217.58,303.68Z" />
+  <path d="M299,164.42h0a10.17,10.17,0,0,0-8.7,10.22c1.33,32.6-10.88,64.9-34.19,89.77a132.25,132.25,0,0,1-28.3,22.85c-.91.55-1.83,1.08-2.76,1.6l-.3.17L234,305.45l.3-.17c1.08-.62,2.16-1.23,3.24-1.88A153.16,153.16,0,0,0,270.32,277c27-28.79,41.11-66.16,39.6-103.88A9.23,9.23,0,0,0,299,164.42Z" />
+  </g>
+    <path d="M220.46,77.92c2.89,14.34,11.1,14.8,20.85,13.14,22.74-3.87,45.49-7.75,68.3-11.14,15.8-2.35,18.34.5,16,16-2.66,18-2.78,18.13-20.76,20.48l-30.36,3.94c.4,6.62.76,12.66,1.15,19.2l42.54-1.9q.63,2.63,1.28,5.26c-4.29,2.18-8.39,5.67-12.9,6.34-25.93,3.82-51.94,7.13-78,10.17-4.12.48-8.51-1.32-15.16-2.48,12.64-14.48,28.36-9.18,42.3-14.44-.45-5.5-.93-11.49-1.58-19.52-8.87,1.16-16.87,2-24.78,3.28-9.64,1.59-16.65-1.42-21.58-10.1-11.2-19.7-24.1-38.57-33.58-59-6-13-7.6-28.23-10.32-42.62C162.35,6.23,167.2.39,175.39,0c7.89-.35,13.64,3.42,15.66,12.54a289.93,289.93,0,0,0,10.78,36.7c3.83,10.5,11.62,14.25,23.32,12,15.71-3.08,31.73-4.61,47.64-6.66,6.07-.78,13.29-.88,13,7.12-.11,3.17-6.62,8.07-10.81,8.81C257.37,73.61,239.51,75.45,220.46,77.92Z" style="fill: #fff"/>
+   
   </g>`;
+
   document.querySelector("#review-circle2").innerHTML = `
   <g>
     <g>

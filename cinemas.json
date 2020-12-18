@@ -1,7 +1,7 @@
 [
   {
     "name": "Imperial",
-    "image": "imperial.jpg",
+    "image": "./assets/images/cinemas/imperial.jpg",
     "overallRating": 4,
     "overallColor": "var(--harlequin)",
     "comfortRating": 4,
@@ -13,7 +13,7 @@
   },
   {
     "name": "Cinemaxx",
-    "image": "cinemaxx.jpg",
+    "image": "./assets/images/cinemas/cinemaxx.jpg",
     "overallRating": 3,
     "overallColor": "var(--selectiveyellow)",
     "comfortRating": 2,
@@ -25,7 +25,7 @@
   },
   {
     "name": "Big Bio",
-    "image": "bigbio.jpg",
+    "image": "./assets/images/cinemas/bigbio.jpg",
     "overallRating": 2,
     "overallColor": "var(--crimson)",
     "comfortRating": 5,
@@ -37,7 +37,7 @@
   },
   {
     "name": "Palads",
-    "image": "palads.jpg",
+    "image": "./assets/images/cinemas/palads.jpg",
     "overallRating": 2,
     "overallColor": "var(--crimson)",
     "comfortRating": 1,
@@ -49,7 +49,7 @@
   },
   {
     "name": "Empire",
-    "image": "empire.jpg",
+    "image": "./assets/images/cinemas/empire.jpg",
     "overallRating": 3,
     "overallColor": "var(--selectiveyellow)",
     "comfortRating": 2,
