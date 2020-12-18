@@ -25,7 +25,7 @@
   },
   {
     "name": "Big Bio",
-    "image": "./assets/images/cinemas/bigbio.jpg",
+    "image": "./assets/images/cinemas/bigBio.jpg",
     "overallRating": 2,
     "overallColor": "var(--crimson)",
     "comfortRating": 5,
