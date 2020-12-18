@@ -54,19 +54,20 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: var(--umber);
+  z-index: 10;
+  position: fixed;
 }
 #mobile-menu-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
-  margin-bottom: 7rem;
+  margin-bottom: 12rem;
   font-size: 2.5rem;
 }
 #mobile-menu-container a {
   cursor: pointer;
   text-decoration: none;
   color: white;
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: center;
   overflow: auto;
 }
@@ -103,6 +104,12 @@ body {
 
   #header-container a {
     font-size: 1rem;
+  }
+
+  #logo {
+    margin-top: 0;
+    display: block;
+    margin: auto;
   }
 }
 @media only screen and (max-width: 600px) {
