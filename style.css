@@ -264,7 +264,7 @@ body {
 }
 
 #events-container {
-  background-image: url(.assets/images/akira.png);
+  background-image: url(./assets/images/akira.png);
   height: 20rem;
   width: 100%;
   background-size: cover;
